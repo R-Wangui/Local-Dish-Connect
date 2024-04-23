@@ -3,6 +3,9 @@ import Buttons from '../components/layout/Buttons'
 import Aside from '../components/vendors dashboard/Aside'
 import VendorsDashboardNavbar from '../components/vendors dashboard/VendorsDashboardNavbar'
 
+// Vendors can navigate to theri business profile through the Aside to view or edit their profiles 
+// This page can also contain verification tools (in future versions)
+
 function RestaurantInformation() {
   return (
     <>

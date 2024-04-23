@@ -10,6 +10,9 @@ import Testimonials from '../components/landing/Testimonials'
 import Footer from '../components/layout/Footer'
 import NavigationBar from '../components/layout/NavigationBar'
 
+// This is the landing page for Customers. As soon as they login/signup, the will be routed to this page. 
+// It shows the services provided by this webapp. They can navigate to other pages through the navbar
+
 function Landing() {
   return (
     <>

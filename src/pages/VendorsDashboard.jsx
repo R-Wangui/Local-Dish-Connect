@@ -11,7 +11,9 @@ import TopReviews from '../components/vendors dashboard/TopReviews'
 import TotalRevenue from '../components/vendors dashboard/TotalRevenue'
 import VendorName from '../components/vendors dashboard/VendorName'
 
-
+// This is the landingpage for Vendors. As soon as they login/signup, the will be routed to this page
+// This dashboard contains business tools that help them keep track of all their operations.
+// They can also navigate to various pages through the aside. 
 
 function VendorDashboard() {
   return (
