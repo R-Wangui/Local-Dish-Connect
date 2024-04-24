@@ -49,6 +49,20 @@ body {
   }
 }
 /* styling for the authentication pages */
+#welcomePage {
+  /* display: inline-flex;
+  gap: 20px; */
+  margin-left: 40px;
+}
+.welcome-page {
+  display: inline-flex;
+  gap: 480px;
+}
+.welcomebtns {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 #login {
   display: flex;
   justify-content: space-between;
