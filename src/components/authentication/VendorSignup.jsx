@@ -3,6 +3,7 @@ import Vector from '../vector/Vector';
 import { useState } from 'react';
 import { FaCheckSquare, FaHome, FaSquare, FaSquareFull } from 'react-icons/fa'
 import Buttons from '../layout/Buttons';
+import { Link } from 'react-router-dom';
 
 
 function VendorSignup() {
@@ -112,7 +113,7 @@ function VendorSignup() {
                 border: 'none',
                 margin: '20px 0',
                 color: "#000"
-              }}>Signup <img src="/images/arrow-right.svg" alt="" /> </Buttons>
+              }}><Link to='/vendorsdashboard' style={{textDecoration: 'none', color: 'black'}} >Sign up <img src="/images/arrow-right.svg" alt="" /></Link></Buttons>
               <h5 style={{textAlign: 'center', fontSize: "20px", fontWeight: 500, lineHeight: "30px"}}>CONTINUE A GUEST</h5>
             </div>
           </Form>

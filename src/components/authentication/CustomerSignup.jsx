@@ -1,7 +1,10 @@
 import { Form, Alert } from 'react-bootstrap';
 import { useState } from 'react';
+import Vector from '../vector/Vector';
 import { FaCheckSquare, FaHome, FaSquare, FaSquareFull } from 'react-icons/fa'
 import Buttons from '../layout/Buttons';
+import { Link } from 'react-router-dom';
+
 
 
 
@@ -96,11 +99,11 @@ function CustomerSignup() {
               onChange={(e) => setPassword(e.target.value)} 
             />
             <div className="d-grid gap-2">
-              <Buttons type="submit" size='lg' style= {styleTheButton}>Signup</Buttons>
+              <Buttons type="submit" size='lg' style= {styleTheButton}><Link to='/landing' style={{textDecoration: 'none', color: 'black'}}  >SIGN UP <img src="/images/arrow-right.svg" alt="" /></Link></Buttons>
             </div>  
           </Form.Group>
           
-          <p>Already have an account? <Link to="/login" style={{color:"#FF3326"}}>Login</Link></p>
+          <p>Already have an account? <Link to="/customerlogin" style={{color:"#FF3326"}}>Login</Link></p>
         </Form>
         <Vector />
       </div>

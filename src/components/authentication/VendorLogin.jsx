@@ -2,12 +2,16 @@ import { Form, Alert } from 'react-bootstrap';
 import { useState } from 'react';
 import { FaRegCheckSquare } from 'react-icons/fa'
 import Buttons from '../layout/Buttons';
+import { Link } from 'react-router-dom';
+
+
 
 function VendorLogin() {
   // use useState hook to set the email, password and throw error incase of an error
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  
 
 // Event handler function for the form so it submits before refreshing the page
   const handleSubmit = (e) => {
@@ -84,16 +88,16 @@ function VendorLogin() {
               <p style={{color: "rgba(255, 118, 34, 1)", fontSize: "14px", fontWeight: 400}}>Forgot Password</p>
             </div>
             <div style={{ marginBottom: "20px" }}>
-              <Buttons type="submit" size='lg' style={{
+              <Buttons onClick={handleSubmit} type="submit" size='lg' style={{
                 width: "100%", backgroundColor: '#FDC55E',
                 border: 'none',
                 margin: '20px 0',
                 color: "#000"
-              }}>LOG IN <img src="/images/arrow-right.svg" alt="" /> </Buttons>
+              }}><Link to='/customerlogin' style={{textDecoration: 'none', color: 'black'}}  >LOG IN <img src="/images/arrow-right.svg" alt="" /></Link> </Buttons>
             </div>
           
             <div style={{fontSize: "16px", fontWeight: 700, textAlign: "center", marginBottom: "30px" }}>
-              {"Don’t"} have an account? <span style={{color: "rgba(255, 51, 38, 1)", fontWeight: 500}}>Sign up</span>
+              {"Don’t"} have an account? <Link to="/signup" style={{color: "rgba(255, 51, 38, 1)", fontWeight: 500}}>Sign up</Link>
             </div>
           </Form>
           <div className="vendorloginImage">

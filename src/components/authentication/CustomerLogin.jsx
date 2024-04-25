@@ -3,6 +3,7 @@ import Vector from '../vector/Vector';
 import { useState } from 'react';
 import { FaRegCheckSquare } from 'react-icons/fa';
 import Buttons from '../layout/Buttons';
+import { Link } from 'react-router-dom';
 // import {useHistory} from 'react-router-dom';
 
 function CustomerLogin() {
@@ -43,7 +44,6 @@ function CustomerLogin() {
   };
   return (
     <>
-      <h1>Log in</h1>
       <div id="login">
         {error && <Alert variant="danger">{error}</Alert>}
         <Form id="form" onSubmit={handleSubmit}>
@@ -84,9 +84,9 @@ function CustomerLogin() {
           </div>
           </Form.Group>
           <div className="d-grid gap-2">
-            <Buttons type="submit" size='lg' style= {buttonStyle} >Login</Buttons>
+            <Buttons type="submit" size='lg' style= {buttonStyle} ><Link to='/landing' style={{textDecoration: 'none', color: 'black'}}  >LOG IN <img src="/images/arrow-right.svg" alt="" /></Link></Buttons>
           </div>
-          <p style={{marginTop:"20px"}}>Don't have an account? <Link to="/signup" style={{color:"#FF3326"}}>Sign up</Link></p>
+          <p style={{marginTop:"20px"}}>Don't have an account? <Link to="/customersignup" style={{color:"#FF3326"}}>Sign up</Link></p>
         </Form>
         <Vector />
       </div>

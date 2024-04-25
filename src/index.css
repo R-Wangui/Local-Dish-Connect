@@ -4,6 +4,9 @@
 /* * {
   overflow: hidden;
 } */
+
+
+
 body {
   font-family: "Montserrat", sans-serif;
   overflow-x: hidden;
@@ -183,6 +186,9 @@ h1 {
 }
 /* Media query for the authentication pages */
 @media only screen and (max-width: 400px) {
+  body {
+    overflow-x: hidden;
+  }
   #login {
     display: flex;
     justify-content: space-between;
@@ -234,8 +240,9 @@ h1 {
 /* .topVendors {
   border-radius: 20px;
 } */
-.imgCard {
+Card.Img {
   background-color: #F5C83B;
+  border-radius: 20px 20px 0px 0px;
 }
 .vendors-title {
   color: #191919;
@@ -655,7 +662,9 @@ h1 {
 
 /* Media Query for the landing page */
 @media only screen and (max-width: 400px) {
-  
+  body {
+    overflow-x: hidden;
+  }
   .me-2 {
     display: none;
   }

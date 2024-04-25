@@ -2,6 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+// import { Link } from 'react-router-dom';
 
 
 
@@ -26,7 +27,7 @@ function NavigationBar() {
                         id="nav-links">
                         <Nav.Link href="/" className='home'>Home</Nav.Link>
                         <Nav.Link href="/menu" className='menu'>Menu</Nav.Link>
-                        <Nav.Link href="/vendors" className='vendors'>Vendors</Nav.Link>
+                        <Nav.Link active href="/vendor" className='vendors'>Vendors</Nav.Link>
                         <Nav.Link href="#" className='contactUs'>Contact Us</Nav.Link>   
                     </Nav>
                     <Form className="d-flex">

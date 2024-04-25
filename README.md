@@ -1,9 +1,34 @@
-# React + Vite
+Local Dish Corner
+This is a webapp that brings together vendors and buyers on the same platform.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Problem Statement: 
+The lack of visibility and accessibility of local culinary offerings within the community. Despite the rich diversity and uniqueness of local cuisines, many residents and visitors are unaware of the delicious options available nearby. This lack of awareness leads to the underutilization of local eateries, missed opportunities for businesses to thrive, and a diminished sense of community pride. Additionally, traditional marketing channels may not effectively reach potential customers, further exacerbating the issue.
 
-Currently, two official plugins are available:
+Problem Solution: 
+To create a platform that showcases local restaurants, food vendors, and culinary experiences, making it easier for people to discover, support, and enjoy the vibrant food culture of their community.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# Local-Dish-Connect
+Product Features:
+User authentication:
+- Allow users to register, log in, and securely authenticate their identity.
+Search and discovery:
+- Search bar with a powerful search options
+Restaurant profiles:
+- Detailed information on each restaurant profiles
+Admin dashboard
+- A dashboard for all vendors to track their sales
+
+Technologies Used
+- Frontend: Html, CSS, Bootstrap, JavaScript (React)
+I use Vite as my build tool. 
+
+To get started:
+1. Make sure you have Node in your system.
+2. clone the repository.
+3. install all the dependencies 
+    use: npm install
+4. Start the server
+    npm run dev
+5. open your browser, and your project will be on 
+    http://localhost:5173/
+
+
