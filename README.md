@@ -1,5 +1,5 @@
 Local Dish Corner
-This is a webapp that brings together vendors and buyers on the same platform.
+This is a web app that brings together vendors and buyers on the same platform.
 
 Problem Statement: 
 The lack of visibility and accessibility of local culinary offerings within the community. Despite the rich diversity and uniqueness of local cuisines, many residents and visitors are unaware of the delicious options available nearby. This lack of awareness leads to the underutilization of local eateries, missed opportunities for businesses to thrive, and a diminished sense of community pride. Additionally, traditional marketing channels may not effectively reach potential customers, further exacerbating the issue.
@@ -11,14 +11,14 @@ Product Features:
 User authentication:
 - Allow users to register, log in, and securely authenticate their identity.
 Search and discovery:
-- Search bar with a powerful search options
+- Search bar with powerful search options
 Restaurant profiles:
-- Detailed information on each restaurant profiles
+- Detailed information on each restaurant's profiles
 Admin dashboard
 - A dashboard for all vendors to track their sales
 
 Technologies Used
-- Frontend: Html, CSS, Bootstrap, JavaScript (React)
+- Frontend: HTML, CSS, Bootstrap, JavaScript (React)
 I use Vite as my build tool. 
 
 To get started:
