@@ -7,12 +7,49 @@ function Testimonial() {
         <div id='testimonials'>
           <h1 className='testimonial-header'><span>Testi</span><span style={{color:"#FDC55E"}}>monial</span></h1>
           <h2 className='testimonial-h2'>What Our Valuable Customers Say About Us</h2>
-          <div id="testimony-container">
-            <img src="\images\Testimonial.png" alt="reviewer-profile" className="testimony-image" />
-            <div className='testimonyand-tag'>
-              <p className="testimony">i just look how fast the delivery gets to me, i am inpatient with my best snaps coming from savy bakery</p>
-              <p className="user-tag" >@Jeremy<span style={{marginLeft:"80px"}}><FaStar /></span></p>
-            </div> 
+          <div className='allTestimonials'> 
+            <div id="testimony-container">
+              <img src="\images\Testimonial.png" alt="reviewer-profile" className="testimony-image" />
+              <div className='testimonyand-tag'>
+                <p className="testimony">"LocalDishCorner’s level of ease is astounding. The vendors on the list are excellent."</p>
+                <p className="user-tag" >Tunde L.<span style={{marginLeft:"80px"}}><FaStar /></span></p>
+              </div> 
+            </div>
+            <div id="testimony-container">
+              <img src="\images\Testimonial.png" alt="reviewer-profile" className="testimony-image" />
+              <div className='testimonyand-tag'>
+                <p className="testimony">"LocalDishCorner’s level of ease is astounding. The vendors on the list are excellent."</p>
+                <p className="user-tag" >Tunde L.<span style={{marginLeft:"80px"}}><FaStar /></span></p>
+              </div> 
+            </div>
+            <div id="testimony-container">
+              <img src="\images\Testimonial.png" alt="reviewer-profile" className="testimony-image" />
+              <div className='testimonyand-tag'>
+                <p className="testimony">"LocalDishCorner’s level of ease is astounding. The vendors on the list are excellent."</p>
+                <p className="user-tag" >Tunde L.<span style={{marginLeft:"80px"}}><FaStar /></span></p>
+              </div> 
+            </div>
+            <div id="testimony-container">
+              <img src="\images\Testimonial.png" alt="reviewer-profile" className="testimony-image" />
+              <div className='testimonyand-tag'>
+                <p className="testimony">"LocalDishCorner’s level of ease is astounding. The vendors on the list are excellent."</p>
+                <p className="user-tag" >Tunde L.<span style={{marginLeft:"80px"}}><FaStar /></span></p>
+              </div> 
+            </div>
+            <div id="testimony-container">
+              <img src="\images\Testimonial.png" alt="reviewer-profile" className="testimony-image" />
+              <div className='testimonyand-tag'>
+                <p className="testimony">"LocalDishCorner’s level of ease is astounding. The vendors on the list are excellent."</p>
+                <p className="user-tag" >Tunde L.<span style={{marginLeft:"80px"}}><FaStar /></span></p>
+              </div> 
+            </div>
+            <div id="testimony-container">
+              <img src="\images\Testimonial.png" alt="reviewer-profile" className="testimony-image" />
+              <div className='testimonyand-tag'>
+                <p className="testimony">"LocalDishCorner’s level of ease is astounding. The vendors on the list are excellent."</p>
+                <p className="user-tag" >Tunde L.<span style={{marginLeft:"80px"}}><FaStar /></span></p>
+              </div> 
+            </div>
           </div>
           <h4 className='more-reviews'><span>See all </span><span style={{color:"#FDC55E"}}>reviews</span><span> by our </span><span style={{color:"#FDC55E"}}>customers</span>
           <span><svg xmlns="http://www.w3.org/2000/svg" width="35" height="34" viewBox="0 0 35 34" fill="none">

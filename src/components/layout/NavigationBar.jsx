@@ -2,7 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+
 
 
 function NavigationBar() {
@@ -24,23 +24,12 @@ function NavigationBar() {
                         style={{ maxHeight: '100px' }}
                         navbarScroll
                         id="nav-links">
-                        <Nav.Link href="#action1" className='home'>Home</Nav.Link>
-                        <Nav.Link href="#action2" className='menu'>Menu</Nav.Link>
-                        <NavDropdown title="Vendors" id="navbarScrollingDropdown">
-                            <NavDropdown.Item href="#action3">Customers</NavDropdown.Item>
-                            <NavDropdown.Item href="#action4">
-                                Another action
-                            </NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action5">
-                                Something else here
-                            </NavDropdown.Item>
-                        </NavDropdown>
-                        <Nav.Link href="#" className='contactUs'>
-                        Contact Us
-                        </Nav.Link>
+                        <Nav.Link href="/" className='home'>Home</Nav.Link>
+                        <Nav.Link href="/menu" className='menu'>Menu</Nav.Link>
+                        <Nav.Link href="/vendors" className='vendors'>Vendors</Nav.Link>
+                        <Nav.Link href="#" className='contactUs'>Contact Us</Nav.Link>   
                     </Nav>
-                    <Form className="d-flex"> 
+                    <Form className="d-flex">
                         <Form.Control
                         type="search"
                         placeholder="Search"

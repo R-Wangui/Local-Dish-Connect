@@ -1,5 +1,4 @@
-import { Form, Button, Alert } from 'react-bootstrap';
-import Vector from '../vector/Vector';
+import { Form, Alert } from 'react-bootstrap';
 import { useState } from 'react';
 import { FaCheckSquare, FaHome, FaSquare, FaSquareFull } from 'react-icons/fa'
 import Buttons from '../layout/Buttons';
@@ -7,16 +6,19 @@ import Buttons from '../layout/Buttons';
 
 
 function CustomerSignup() {
+  // use useState hook to set the email, password and throw error incase of an error
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [retypePassword, setRetypePassword] = useState('')
   const [error, setError] = useState('');
 
+  // Event handler function for the form so it submits before refreshing the page
   const handleSubmit = (e) => {
     e.preventDefault();
 
     if (!email || !password || !name) {
+      // This condition checks that you enter a valid email and password
       setError("Please enter username, email and password");
       return;
     } else if (name !== available) {
@@ -26,13 +28,20 @@ function CustomerSignup() {
       setError("Please enter a valid email address");
       return;
     } else {
+      // Send the name, email and password saved in memory to the console
       console.log('name:', name);
       console.log('email:', email);
       console.log('Password:', password);
+      // then clear the error message and set it to blank
       setError('');
     }
 
   }
+  // validate the email so the user has to input a correct email and in the right formart
+  const validEmail = (email) => {
+    const re = /\S+@\S+\.\S+/;
+    return re.test(email);
+  };
 
   const styleTheButton = {
     backgroundColor: '#FDC55E',

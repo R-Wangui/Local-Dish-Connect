@@ -28,7 +28,7 @@ function DownloadApp() {
             <img className='herb-image' src="\images\Herb-downloadapp.png" alt="corriander-herb" />
             <div className='downloadTagline'>
                 <h1><span>"</span><span style={{color: '#FDC55E'}}>Unlock</span><span> a world of </span><span style={{color: '#FDC55E'}}>convenience</span><span> and culinary delights With our mobile </span><span style={{color: '#FDC55E'}}>app</span><span> today!"</span></h1>
-                <p>All you need to do is download one of the best delivery apps, and most companies are opting  for mobile app development for food delivery</p>
+                <p>Enjoy a seamless experience akin to providing easy access to local dish menus, unique local cuisines and directions to different restaurants.</p>
                 <div className='downloadIcons'>
                     <div className='googlePlay'>
                         <img src="\images\Google Play logo.svg" alt="" />

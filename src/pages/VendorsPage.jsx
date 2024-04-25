@@ -1,5 +1,5 @@
 import NavigationBar from '../components/layout/NavigationBar'
-import TopVendors from '../components/landing page/TopVendors'
+import TopVendors from '../components/landing/TopVendors'
 import Footer from '../components/layout/Footer'
 
 // Customers can navigate to this page from the landing page. It contains the vendors available in the app. 

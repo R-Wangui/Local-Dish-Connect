@@ -1,7 +1,6 @@
-import { Form, Button, Alert } from 'react-bootstrap';
+import { Form, Alert } from 'react-bootstrap';
 import Vector from '../vector/Vector';
 import { useState } from 'react';
-import { FaCheckSquare, FaHome, FaSquare, FaSquareFull } from 'react-icons/fa'
 import Buttons from '../layout/Buttons';
 
 function CustomerForgotPassword() {
@@ -15,34 +14,37 @@ function CustomerForgotPassword() {
       setError("Please enter a valid email");
       return;
     } else {
-      console.log('Password:', password);
       setError('');
     }
 
   }
   return (
     <>
-      <h1>Log in</h1>
       <div id="login">
         {error && <Alert variant="danger">{error}</Alert>}
         <Form id="form" onSubmit={handleSubmit}>
           <h1 clasName="header">Forget Password</h1>
           <div>
-            <p>Please sign in with your existing account</p>
+            <p>Input your email address to create a new password</p>
           </div>
           <Form.Group className="mb-3" controlId="formGroupPassword">
-            <Form.Label>Password</Form.Label>
+            <Form.Label>EMAIL</Form.Label>
             <Form.Control 
               required
               type="password" 
-              placeholder="Password" 
-              value={password} 
-              onChange={(e) => setPassword(e.target.value)} 
+              placeholder="example@gmail.com" 
+              value={email} 
+              onChange={(e) => setEmail(e.target.value)} 
             />
           </Form.Group>
-          <Button className="btn" type="submit">Login</Button>
-          <div id="remember-me"><span><FaCheckSquare /></span> <p>Remember me <span clasName="forgotPassword"> Forgot Password</span> </p></div>
-          <p>Don't have an account? <a href="#">Sign up</a></p>
+          <div style={{ marginBottom: "20px" }}>
+              <Buttons type="submit" size='lg' style={{
+                width: "100%", backgroundColor: '#FDC55E',
+                border: 'none',
+                margin: '20px 0',
+                color: "#000"
+              }}>SEND <img src="/images/arrow-right.svg" alt="" /> </Buttons>
+          </div>
         </Form>
         <Vector />
       </div>

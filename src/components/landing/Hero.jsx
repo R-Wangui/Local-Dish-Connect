@@ -23,15 +23,15 @@ function Hero() {
                     </span><span> People trust us</span>
                 </div>
                 <div className="hero-tagline">
-                    <span>One</span><span style={{color: '#FDCD5E'}}> Stop!</span>
+                    <span>One</span><span style={{color: 'white'}}> Stop!</span>
                     <span></span><br/>
                     <span>To Your <br/></span>
                     <span></span>
-                    <span style={{color: '#FDCD5E'}}>Special<br/></span>
+                    <span style={{color: 'white'}}>Special<br/></span>
                     <span></span>
                     <span>Food Offer</span>
                 </div>
-                <p style={{marginTop: '40px'}}>Lorem ipsum dolor sit amet consectetur. Aliquet massa ac risus non mi morbi egestas lacus tellus. Amet</p>
+                <p style={{marginTop: '20px'}}>A unified platform that connects food lovers to their favourite restaurants in Lagos</p>
             </div>
             <div>
                 <img src="\images\Hero image.png" alt="Hero image" className="hero-image" />
@@ -39,7 +39,7 @@ function Hero() {
         </div>
         <div className="search-location">
             <label htmlFor="">Your Location</label>
-            <FaSearch /><input type="search" name="search" placeholder="Search" id="hero-search" />
+            <input type="search" name="search" placeholder="Search" id="hero-search"  />
         </div>
         <svg xmlns="http://www.w3.org/2000/svg" width="235" height="210" viewBox="0 0 235 210" fill="none" className="hero-deco">
             <g filter="url(#filter0_f_315_3963)">

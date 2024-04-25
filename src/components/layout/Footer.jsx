@@ -6,7 +6,7 @@ function Footer() {
         <div id="footer">
             <div id="footer-msg">
                 <h3>LocalDishCorner</h3>
-                <p className="footer-message">We give you wears that keeps you looking glamorous and trendy, providing everything of your outfit with well thought out designs for all your ocassions.</p>
+                <p className="footer-message">We provide complete culinary experience with carefully crafted recipes for all your dining occasions and dishes that keep your plate delighted.</p>
                 <div className="footer-icons">
                     <img className="footer-icon" src="\images\Instagramfooter.png" alt="instagram" />
                     <img className="footer-icon" src="\images\Facebookfooter.png" alt="facebook" />

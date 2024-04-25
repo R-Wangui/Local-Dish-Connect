@@ -1,14 +1,15 @@
 import { Form, Alert } from 'react-bootstrap';
 import Vector from '../vector/Vector';
 import { useState } from 'react';
-import { FaRegCheckSquare, FaSquare, FaSquareFull } from 'react-icons/fa'
+import { FaRegCheckSquare } from 'react-icons/fa';
 import Buttons from '../layout/Buttons';
+// import {useHistory} from 'react-router-dom';
 
 function CustomerLogin() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-
+  // const history = useHistory();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -32,6 +33,10 @@ function CustomerLogin() {
     const re = /\S+@\S+\.\S+/;
     return re.test(email);
   };
+  // Directing the login button to go to the landingpage
+  // history.push('/landing');
+
+  // Styling for the button
   const buttonStyle = {
     backgroundColor: '#FDC55E',
     border: 'none'
