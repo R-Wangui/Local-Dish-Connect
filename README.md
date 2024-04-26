@@ -20,16 +20,21 @@ Restaurant profiles:
 Admin dashboard
 - A dashboard for all vendors to track their sales
 
-Technologies Used
-- Frontend: Html, CSS, Bootstrap, JavaScript (React)
-    I use Vite as my build tool. 
-- Backend: Express, Node.js
-- Database: MongoDB
-- Authentication: bcrypt for password hashing.
-
 Frontend
 We used React library to optimize on usability of the components. 
 We used Bootstrap for their encapsulated components to create easy and visually appealing webapp. 
+
+Technologies Used
+- Html, CSS: The basic structure of the app and an external stylesheet for styling the components. 
+- Bootstrap: A CSS framework for developing responsive. It provides a set of pre-designed UI components, such as buttons, forms, navigation bars, and more, which can be easily customized to fit the design requirements of the application.
+- React: A JavaScript library for building user interfaces. It follows a component-based architecture, which promotes   reusability and modularity, making it ideal for building large-scale applications.
+- Vite: A fast build tool for frontend development. It offers instant server start, making the development process faster and more efficient as it loads faster.
+
+Dependencies:
+
+React: A JavaScript library for building user interfaces.
+Bootstrap: A popular CSS framework for developing responsive and mobile-first websites.
+Vite: A fast build tool for modern web development.
 
 
 Backend
@@ -53,53 +58,26 @@ Agile Development: The project follows the agile development methodology, allowi
 Component-Based Architecture: [Your Project Name] is built using a component-based architecture, promoting reusability and maintainability.
 
 Challenges We encountered 
-- It was challenging for the frontend 
+- A stiff learning curve
+This project felt like we were thrown in the deep-end and forced to either sink or swim. We learned alot of things on the job and it was both exciting and challneging. 
 
-Next Iteration and Future Plans While I'm proud of the progress I've made with the Time Tracker Application, I envision several improvements and additional features for future iterations, including:
+Next Iteration and Future Plans While we're proud of the progress we've made with Local Dish Corner Application, we envision several improvements and additional features for future iterations, including:
 
-Advanced Reporting: Enhancing the reporting capabilities by providing detailed insights and analytics on time usage, productivity trends, and task categorization.
+Geo-location: Which will enhance search features and delivery needs in the future this will help users/vendors optimize the search feature already existing in the application.
 
-Mobile App: Developing a mobile application version of the Time Tracker to ensure accessibility and convenience for users who prefer tracking their time on their smartphones or tablets.
+Mobile App: Developing a mobile application for Local Dish Corner to ensure accessibility and convenience for users who maybe using it on their smartphones or tablets and for overal convenience. 
 
-Collaboration and Team Features: Introducing collaboration features to facilitate teamwork, such as shared projects, team calendars, and collaborative task management.
+Collaboration with social media platforms for vendors: Introducing collaboration features to improve visibility for vendors.
 
 
 
-To get started:
+To get started for collaboration:
 1. Make sure you have Node in your system.
-2. clone the repository.
+2. clone the repository at: https://github.com/R-Wangui/Local-Dish-Connect.git
 3. install all the dependencies 
     use: npm install
 4. Start the server
     npm run dev
 5. open your browser, and your project will be on 
-    http://localhost:5173/
-    http://localhost:5001/
-
-
-
-
-
-Frontend Design: Creating a user-friendly and visually appealing frontend interface using modern web development technologies such as HTML, CSS, and JavaScript, along with frameworks like React or Vue.js, posed challenges in terms of UI/UX design, responsiveness, and smooth interaction with the backend API.
-
-
-Deployment and Scalability: Setting up the deployment environment, configuring servers, and ensuring the application's scalability and performance were essential aspects to consider for a production-ready application.
-
-Struggles and Lessons Learned During the development process, I faced various challenges and roadblocks that tested my problem-solving skills and forced me to dive deeper into specific technologies and concepts. Some of the struggles I encountered include:
-
-Database Design: Designing an optimal database schema and handling data relationships efficiently proved to be more complex than initially anticipated. I had to revise and refine the data models to ensure data integrity and performance.
-
-User Experience: Designing an intuitive and user-friendly interface required continuous iteration and soliciting feedback from potential users. Balancing simplicity with powerful features was a constant challenge, and I had to prioritize essential functionalities to avoid overwhelming the users.
-
-Authentication Security: Implementing secure authentication and authorization was crucial to protect user data. I encountered challenges in handling password encryption, token-based authentication, and preventing common security vulnerabilities like cross-site scripting (XSS) or cross-site request forgery (CSRF). Rigorous testing and adopting best practices helped address these concerns.
-
-Next Iteration and Future Plans While I'm proud of the progress I've made with the Time Tracker Application, I envision several improvements and additional features for future iterations, including:
-
-Advanced Reporting: Enhancing the reporting capabilities by providing detailed insights and analytics on time usage, productivity trends, and task categorization.
-
-Mobile App: Developing a mobile application version of the Time Tracker to ensure accessibility and convenience for users who prefer tracking their time on their smartphones or tablets.
-
-Collaboration and Team Features: Introducing collaboration features to facilitate teamwork, such as shared projects, team calendars, and collaborative task management.
-
-Integration with External Tools: Integrating the application with popular productivity and project management tools like Trello, Jira, or Google Calendar, enabling seamless data synchronization and task
-
+  Frontend:  http://localhost:5173/
+  Backend:  http://localhost:5001/

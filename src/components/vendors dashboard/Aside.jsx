@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaAward, FaBookOpen, FaComment, FaQuestion, FaSignOutAlt, FaStar, FaTools } from 'react-icons/fa'
-import { FaBusinessTime, FaHouse } from 'react-icons/fa6'
+import { FaBusinessTime, FaHouse } from 'react-icons/fa6';
+import { Link } from 'react-router-dom';
 
 function Aside() {
   return (
@@ -8,16 +9,12 @@ function Aside() {
         <div id='vendorAside'>
             <div className='analytics'>
                 <span className='aside-icon'><FaHouse /></span>
-                <span style={{marginLeft: '12px'}}> Dashboard</span>   
+                <span style={{marginLeft: '12px'}}> <Link to="/vendorsdashboard" style={{color:"white", textDecoration: "none"}}>Dashboard</Link></span>   
             </div>
             <div>
                 <span className='asideIcon'><FaBusinessTime /></span>
-                <span style={{marginLeft: '12px'}}> Business Profile</span>   
+                <span style={{marginLeft: '12px'}}><Link to="/businessprofile" style={{color:"white", textDecoration: "none"}}>Business Profile</Link></span>   
             </div>
-            {/* <div >
-                <span className='aside-icon'><FaChartLine /></span>
-                <span style={{marginLeft: '12px'}}> Analytics</span>  
-            </div> */}
             <div>
                 <span className='asideIcon'><FaBookOpen /></span>
                 <span style={{marginLeft: '12px'}}> Menu Management</span>

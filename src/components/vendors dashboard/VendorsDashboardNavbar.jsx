@@ -39,9 +39,9 @@ function VendorsDashboardNavbar() {
               aria-label="Search"
             />
             <div className='dashboardicons'>
-                <div className='dashboardIcon'><FaBell /><span>12</span></div>
+                <div className='dashboardIcon'><FaBell /></div>
                 <div className='dashboardIcon'><FaCommentDots /></div>
-      {/* This section deal with the PROMOTION component. when you hover on the gift icon */}
+                {/* This section deal with the PROMOTION component. when you hover on the gift icon */}
                 <div className='dashboardIcon3' onMouseEnter={() => setDisplayComponent(true)} onMouseLeave={() => setDisplayComponent(false)}>
                   <FaGift />
                   { displayComponent && <div id='promotion'>

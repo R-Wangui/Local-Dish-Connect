@@ -26,16 +26,20 @@ body {
   margin-left: 150px;
   gap: 32px; 
 }
+.active {
+  background-color: #FDC55E;
+  border-radius: 16px;
+}
 .me-2{
   height: 40px;
   width: 400px;
   justify-content: center;
   margin-top: 5px;
 }
-.home {
+/* .home {
   background-color: #FDC55E;
   border-radius: 16px;
-}
+} */
 .menu:hover {
   color: #FDC55E;
   scale: 1.2;
@@ -55,6 +59,7 @@ body {
 #navbarScroll:hover {
   color: #FDC55E;
 }
+
 /* Responsiveness for the Container that comes with the Navbar */
 @media only screen and (max-width: 400px) {
   .container-fluid {

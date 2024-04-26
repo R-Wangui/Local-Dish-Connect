@@ -7,7 +7,8 @@ import CustomerLogin from './components/authentication/CustomerLogin';
 import CustomerSignup from './components/authentication/CustomerSignup';
 import VendorLogin from './components/authentication/VendorLogin';
 import VendorSignup from './components/authentication/VendorSignup';
-import VendorsDashboard from './pages/VendorsDashboard'
+import VendorsDashboard from './pages/VendorsDashboard';
+import BusinessProfile from './pages/BusinessProfile';
 import CustomerChangePassword from './components/authentication/CustomerChangePassword';
 import CustomerForgotPassword from './components/authentication/CustomerForgotPassword';
 import VendorForgotPassword from './components/authentication/VendorForgotPassword';
@@ -27,11 +28,10 @@ function App() {
           <Route path='/customersignup' element={<CustomerSignup />}></Route>
           <Route path='/vendorsdashboard' element={<VendorsDashboard />}></Route>
           <Route path='/landing' element={<Landing />}></Route>
-          <Route path='/vendors' element={<VendorsPage />}></Route>
+          <Route path='/vendorspage' element={<VendorsPage />}></Route>
+          <Route path='/businessprofile' element={<BusinessProfile />}></Route>
         </Routes>
       </Router> 
-
-      {/* <MenuManagement /> */}
       
     </>
   )

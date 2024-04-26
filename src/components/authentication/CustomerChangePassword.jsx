@@ -1,4 +1,4 @@
-import { Form, Button, Alert } from 'react-bootstrap';
+import { Form, Alert } from 'react-bootstrap';
 import Vector from '../vector/Vector';
 import { useState } from 'react';
 import Buttons from '../layout/Buttons';
