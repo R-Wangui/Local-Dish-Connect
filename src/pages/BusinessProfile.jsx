@@ -15,7 +15,7 @@ function RestaurantInformation() {
             <div className='businessProfile'>
                 <h4>Restaurant Information</h4> <span><Buttons>Edit</Buttons></span>
                 <img src="\images\Navbar profile pic.png" alt="" width='60px' height='60px' />
-                <br /><hr />
+                <br /><hr style={{width: 'auto'}} />
                 <div>
                     <p>Vendor ID: LD-23456</p>
                     <hr />

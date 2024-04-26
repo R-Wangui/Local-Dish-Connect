@@ -1,20 +1,16 @@
 import { Form, Alert } from 'react-bootstrap';
 import { useState } from 'react';
-import Vector from '../vector/Vector';
-import { FaCheckSquare, FaHome, FaSquare, FaSquareFull } from 'react-icons/fa'
-import Buttons from '../layout/Buttons';
 import { Link } from 'react-router-dom';
-
-
-
+import Vector from '../vector/Vector';
+import Buttons from '../layout/Buttons';
 
 function CustomerSignup() {
   // use useState hook to set the email, password and throw error incase of an error
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [retypePassword, setRetypePassword] = useState('')
   const [error, setError] = useState('');
+  const apiURL = "https://dishcorner.onrender.com/api/v1/auth/register";
 
   // Event handler function for the form so it submits before refreshing the page
   const handleSubmit = (e) => {
@@ -24,22 +20,48 @@ function CustomerSignup() {
       // This condition checks that you enter a valid email and password
       setError("Please enter username, email and password");
       return;
-    } else if (name !== available) {
-      setError("Username not available");
-      return;
     } else if (!validEmail(email)) {
       setError("Please enter a valid email address");
       return;
     } else {
-      // Send the name, email and password saved in memory to the console
-      console.log('name:', name);
-      console.log('email:', email);
-      console.log('Password:', password);
-      // then clear the error message and set it to blank
-      setError('');
+      // Send the name, email and password saved in memory to the server for registration
+      fetch(apiURL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          password: password
+        }),
+      })
+      .then(response => response.json())
+      .then(data => {
+        // If user is registered successfully, fetch user data
+        if (data.success) {
+          fetchUserData(email);
+        } else {
+          setError(data.message);
+        }
+      })
+      .catch((err) => console.log(err));
     }
+  };
 
-  }
+  // Fetch user data after successful registration
+  const fetchUserData = (email) => {
+    const getUserDataURL = `https://dishcorner.onrender.com/api/v1/auth/register${email}`;
+    fetch(getUserDataURL)
+      .then((response) => response.json())
+      .then((data) => {
+        setName(data.firstName);
+        setEmail(data.email);
+        setPassword(data.password);
+      })
+      .catch((err) => console.log(err));
+  };
+    
   // validate the email so the user has to input a correct email and in the right formart
   const validEmail = (email) => {
     const re = /\S+@\S+\.\S+/;
@@ -51,13 +73,14 @@ function CustomerSignup() {
     border: 'none',
     marginTop: '60px',
     width: '500px'
-  }
+  };
+
   return (
     <>
       <div id="signup">
         {error && <Alert variant="danger">{error}</Alert>}
         <Form id='form' onSubmit={handleSubmit}>
-          <h1 clasName="header">Sign Up</h1>
+          <h1 className="header">Sign Up</h1>
           <div id="social-logins">
             <p>Signup using social networks</p>
             <div id="login-icons">
@@ -66,7 +89,7 @@ function CustomerSignup() {
               <img className="login-icon" src="\images\x 1.png" alt="food-image" />
             </div>
             <div id="or">
-            <hr style={{width:"220px"}}></hr><span>Or</span><hr style={{width:"220px"}}></hr>
+              <hr style={{width:"220px"}}></hr><span>Or</span><hr style={{width:"220px"}}></hr>
             </div>
           </div>
           <Form.Group className="mb-3" controlId="formGroupName">
@@ -99,7 +122,9 @@ function CustomerSignup() {
               onChange={(e) => setPassword(e.target.value)} 
             />
             <div className="d-grid gap-2">
-              <Buttons type="submit" size='lg' style= {styleTheButton}><Link to='/landing' style={{textDecoration: 'none', color: 'black'}}  >SIGN UP <img src="/images/arrow-right.svg" alt="" /></Link></Buttons>
+              <Buttons type="submit" size='lg' style= {styleTheButton}> Sign up
+                {/* <Link to='/landing' style={{textDecoration: 'none', color: 'black'}}  >SIGN UP <img src="/images/arrow-right.svg" alt="" /></Link> */}
+              </Buttons>
             </div>  
           </Form.Group>
           

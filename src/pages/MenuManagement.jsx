@@ -1,49 +1,78 @@
 import React from 'react'
+import Buttons from '../components/layout/Buttons'
+import Aside from '../components/vendors dashboard/Aside'
 
 function MenuManagement() {
   return (
     <>
-        <div id='menuManagement'>
+        <Aside />
+        {/* <div id='menuManagement'>
             <div>
                 <h4>Menu Management</h4>
                 <Buttons>Add Food</Buttons>
             </div>
-            <div style={{width: '100%', height: '100%', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 34, display: 'inline-flex'}}>
-                <div style={{padding: 8, justifyContent: 'center', alignItems: 'center', gap: 8, display: 'inline-flex'}}>
-                    <div>Rank</div>
-                </div>
-                <div style={{padding: 8, justifyContent: 'center', alignItems: 'center', gap: 8, display: 'inline-flex'}}>
-                    <div>1</div>
-                </div>
-                <div style={{padding: 8, justifyContent: 'center', alignItems: 'center', gap: 8, display: 'inline-flex'}}>
-                    <div>2</div>
-                </div>
-                <div style={{padding: 8, justifyContent: 'center', alignItems: 'center', gap: 8, display: 'inline-flex'}}>
-                    <div>3</div>
-                </div>
-                <div style={{padding: 8, justifyContent: 'center', alignItems: 'center', gap: 8, display: 'inline-flex'}}>
-                    <div>4</div>
-                </div>
-                <div style={{padding: 8, justifyContent: 'center', alignItems: 'center', gap: 8, display: 'inline-flex'}}>
-                    <div>5</div>
-                </div>
-                <div style={{padding: 8, justifyContent: 'center', alignItems: 'center', gap: 8, display: 'inline-flex'}}>
-                    <div>6</div>
-                </div>
-                <div style={{padding: 8, justifyContent: 'center', alignItems: 'center', gap: 8, display: 'inline-flex'}}>
-                    <div>7</div>
-                </div>
-                <div style={{padding: 8, justifyContent: 'center', alignItems: 'center', gap: 8, display: 'inline-flex'}}>
-                    <div>8</div>
-                </div>
-                <div style={{padding: 8, justifyContent: 'center', alignItems: 'center', gap: 8, display: 'inline-flex'}}>
-                    <div>9</div>
-                </div>
-                <div style={{padding: 8, justifyContent: 'center', alignItems: 'center', gap: 8, display: 'inline-flex'}}>
-                    <div>10</div>
-                </div>
+            <div>
+          <div className='customers'>
+            <div className='column1'>
+              <div>
+                <h6>Customer</h6>
+              </div>
+              <div className='customer1'>
+                <img src="\images\Customer1.svg" />
+                <p>Ayo Dudu</p>
+              </div>
+              <div>
+                <img src="\images\Customer2.svg" />
+                <p>Ayo Dudu</p>
+              </div>
             </div>
+            <div className='column2'>
+              <div>
+                <h6>User ID</h6>
+              </div>
+              <div>
+                <p>223344556677</p>
+              </div>
+              <div>
+                <p>223344556677</p>
+              </div>
+            </div>
+            <div className='column3'>
+              <div>
+                <h6>Address</h6>
+              </div>
+              <div>
+                <p>Oja Oba</p>
+              </div>
+              <div>
+                <p>Oja Oba</p>
+              </div>
+            </div>
+            <div className='column4'>
+              <div>
+                <h6>Phone No</h6>
+              </div>
+              <div>
+                <p>0901234567</p>
+              </div>
+              <div>
+                <p>0901234567</p>
+              </div>
+            </div>
+            <div className='column5'>
+              <div>
+                <h6>Status</h6>
+              </div>
+              <div>
+                <p>Reviewed</p>
+              </div>
+              <div>
+                <p>Visited</p>
+              </div>
+            </div>
+          </div>
         </div>
+        </div> */}
     </>
   )
 }

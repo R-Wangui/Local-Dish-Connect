@@ -12,6 +12,7 @@ import CustomerChangePassword from './components/authentication/CustomerChangePa
 import CustomerForgotPassword from './components/authentication/CustomerForgotPassword';
 import VendorForgotPassword from './components/authentication/VendorForgotPassword';
 import VendorChangePassword from './components/authentication/VendorChangePassword';
+import MenuManagement from './pages/MenuManagement';
 
 
 function App() {
@@ -30,7 +31,7 @@ function App() {
         </Routes>
       </Router> 
 
-      
+      {/* <MenuManagement /> */}
       
     </>
   )

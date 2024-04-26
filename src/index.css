@@ -713,6 +713,7 @@ Card.Img {
   }
   #download-app {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
    }
   .downloadTagline {
