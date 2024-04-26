@@ -14,9 +14,9 @@ User authentication:
 - Allow users to register, log in, and securely authenticate their identity.
 - We used bcrypt for password hashing.
 Search and discovery:
-- Search bar with a powerful search options
+- Search bar with powerful search options
 Restaurant profiles:
-- Detailed information on each restaurant profiles
+- Detailed information on each restaurant's profiles
 Admin dashboard
 - A dashboard for all vendors to track their sales
 

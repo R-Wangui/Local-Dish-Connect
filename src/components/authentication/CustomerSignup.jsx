@@ -10,7 +10,7 @@ function CustomerSignup() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  const apiURL = "https://dishcorner.onrender.com/api/v1/auth/register";
+  const apiURL = import.meta.env.VITE_API_ENDPOINT;
 
   // Event handler function for the form so it submits before refreshing the page
   const handleSubmit = (e) => {
