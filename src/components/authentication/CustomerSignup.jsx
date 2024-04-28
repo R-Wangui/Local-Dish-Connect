@@ -102,7 +102,7 @@ function CustomerSignup() {
             <Form.Control
               required
               type="text"
-              placeholder="John Doe"
+              placeholder="John"
               value={firstname}
               onChange={(e) => setFirstName(e.target.value)}
             />
@@ -112,7 +112,7 @@ function CustomerSignup() {
             <Form.Control
               required
               type="text"
-              placeholder="John Doe"
+              placeholder="Doe"
               value={lastname}
               onChange={(e) => setLastName(e.target.value)}
             />

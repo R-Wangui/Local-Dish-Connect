@@ -27,15 +27,15 @@ function TotalVisits() {
                 {/* The bars start here */}
                 <div style={{left: 7.31, position: 'absolute'}}>
                     <div style={{width: 22.65, height: 150.77, left: 0, top: 0, position: 'absolute', background: 'rgba(0, 107, 97, 0.17)'}}></div>
-                    <div style={{width: 22.65, height: 47.76, left: 0, top: 103.01, position: 'absolute', background: '#006B61'}}></div>
+                    <div className='animated-bar' style={{height: 47.76, top: 103.01, position: 'absolute', background: '#006B61', transition: 'height 1s ease'}}></div>
                 </div>
                 <div style={{left: 61.96, position: 'absolute'}}>
                     <div style={{width: 22.65, height: 151, left: 0, top: 0, position: 'absolute', background: 'rgba(0, 107, 97, 0.17)'}}></div>
-                    <div style={{width: 22.65, height: 35.12, left: 0, top: 115.88, position: 'absolute', background: '#006B61'}}></div>
+                    <div className='animated-bar' style={{width: 22.65, height: 35.12, left: 0, top: 115.88, position: 'absolute', background: '#006B61'}}></div>
                 </div>
                 <div style={{left: 116.61, position: 'absolute'}}>
                     <div style={{width: 22.65, height: 150.76, left: 0, top: 0, position: 'absolute', background: 'rgba(0, 107, 97, 0.17)'}}></div>
-                    <div style={{width: 22.65, height: 107.69, left: 0, top: 43.07, position: 'absolute', background: '#006B61'}}></div>
+                    <div className='animated-bar' style={{width: 22.65, height: 107.69, left: 0, top: 43.07, position: 'absolute', background: '#006B61'}}></div>
                 </div>
                 <div style={{left: 171.26, position: 'absolute'}}>
                     <div style={{width: 22.65, height: 150.77, left: 0, top: 0, position: 'absolute', background: 'rgba(0, 107, 97, 0.17)'}}></div>

@@ -896,6 +896,22 @@ Card.Img {
     height: 100%;
     margin-bottom: 20px;
   }
+  .bars {
+    width: 22.65px;
+    left: 0px;
+    height: 4;
+    position: absolute;
+    background-color: #006B61;
+  }
+  /* height: 47.76, left: 0, top: 103.01,  transition: 'transform 300ms ease 100ms;'}} */
+  /* Animate the bars */
+  .animated-bar {
+    width: 22.65px;
+    left: 0px;
+    background-color: #006B61;
+    transition: height 42px 3s ease;
+    
+  }
   .monthsRevenue {
     display: inline-flex;
     justify-content: flex-start;
