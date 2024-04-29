@@ -8,7 +8,7 @@ function RestaurantsNearby() {
         <div id='restaurantsNearby'>
             <div>
                 <h1><span>Nearby </span><span style={{color: '#FDC55E'}}>Restaurants</span></h1>
-                <h4>Savor exquisite meals crafted with care and passion, served in a cozy and inviting atmosphere."</h4>
+                <h4>"Savor exquisite meals crafted with care and passion, served in a cozy and inviting atmosphere."</h4>
             </div>
             <img className='rosemary' src="\images\rosemary.svg" alt="" />
             <div className='restaurantCards'>

@@ -41,16 +41,17 @@ function VendorsDashboardNavbar() {
             <div className='dashboardicons'>
                 <div className='dashboardIcon'><FaBell /></div>
                 <div className='dashboardIcon'><FaCommentDots /></div>
-                {/* This section deal with the PROMOTION component. when you hover on the gift icon */}
+                {/* This section deal with the PROMOTION component. when you hover on the gift icon the promotion component appears */}
                 <div className='dashboardIcon3' onMouseEnter={() => setDisplayComponent(true)} onMouseLeave={() => setDisplayComponent(false)}>
                   <FaGift />
-                  { displayComponent && <div id='promotion'>
+                  { displayComponent && 
+                  <div id='promotion'>
                     <div className='promotionText'> 
                         <span className='text1'>Boost your</span>
                         <h5>Sales</h5>
                         <span>by</span>
                         <span className='text2'>60%</span>
-                        <Buttons size="sm" style={promotionButton} >Start now</Buttons>
+                        <Buttons size="sm" style={promotionButton}>Start now</Buttons>
                     </div>
                     <div className='promotionImage'>
                         <img src="\images\rafiki.svg" alt="" width='190px' height='120px' />

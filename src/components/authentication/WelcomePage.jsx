@@ -23,8 +23,8 @@ function WelcomePage() {
                         <h5>Get start with us as a </h5>
                     </div>
                     <Buttons type="submit" size='lg' style={styleWelcomeBtn}><Link to='/vendorsignup' style={{textDecoration: 'none', color: 'black'}}  >Vendor <img src="/images/arrow-right.svg" alt="" /></Link></Buttons>
-                    <Buttons type="submit" size='lg' variant="outline-primary" style={welcomeBtnStyle}><Link to='/customersignup' style={{textDecoration: 'none', color: 'black'}}  >Customer <img src="/images/arrow-right.svg" alt="" /></Link></Buttons>
-                    <Buttons type="submit" size='lg' variant="outline-primary" style={welcomeBtnStyle}>Guest <img src="/images/arrow-right.svg" alt="" /></Buttons>
+                    <Buttons type="submit" size='lg' variant="outline-warning" style={welcomeBtnStyle}><Link to='/customersignup' style={{textDecoration: 'none', color: 'black'}}  >Customer <img src="/images/arrow-right.svg" alt="" /></Link></Buttons>
+                    <Buttons type="submit" size='lg' variant="outline-warning" style={welcomeBtnStyle}>Guest <img src="/images/arrow-right.svg" alt="" /></Buttons>
                     <p>Already have an account? <Link to="/vendorlogin" style={{color:"#FF3326"}}> Vendor Login</Link> OR <Link to="/customerlogin" style={{color:"#FF3326"}}> Customer Login</Link></p>
                 </div>
                 <img src="\images\Frame 1618868298.png" alt="" />

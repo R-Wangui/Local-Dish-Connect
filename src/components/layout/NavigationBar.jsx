@@ -2,14 +2,14 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-// import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 
 
 function NavigationBar() {
+    const location = useLocation();
 
-    
+// Styling the active link
 
     // const navLinksStyle = ({ isActive }) => {
     //     return {
@@ -36,10 +36,10 @@ function NavigationBar() {
                         style={{ maxHeight: '100px' }}
                         navbarScroll
                         id="nav-links">
-                        <Nav.Link href="/landing" className='home' active={Route.pathname === '/landing'} >Home</Nav.Link>
-                        <Nav.Link href="/menu" className='menu' active={Route.pathname === '/menu'} >Menu</Nav.Link>
-                        <Nav.Link href="/vendorspage" className='vendors' active={Route.pathname === '/vendorspage'} >Vendors Page</Nav.Link>
-                        <Nav.Link href="#" className='contactUs' active={Route.pathname === '/#'} >Contact Us</Nav.Link>   
+                        <Nav.Link as={Link} to="/landing" active={location.pathname === '/landing'} >Home</Nav.Link>
+                        <Nav.Link as={Link} to="/menu" active={location.pathname === '/menu'} >Menu</Nav.Link>
+                        <Nav.Link as={Link} to="/vendorspage" active={location.pathname === '/vendorspage'} >Vendors Page</Nav.Link>
+                        <Nav.Link href="#" className='contactUs' active={location.pathname === '/#'} >Contact Us</Nav.Link>   
                     </Nav>
                     <Form className="d-flex">
                         <Form.Control

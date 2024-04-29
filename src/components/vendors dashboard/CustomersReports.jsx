@@ -25,10 +25,17 @@ function CustomersReports() {
                 <img src="\images\Customer2.svg" />
                 <p>Ayo Dudu</p>
               </div>
+              <div>
+                <img src="\images\Customer2.svg" />
+                <p>Ayo Dudu</p>
+              </div>
             </div>
             <div className='column2'>
               <div>
                 <h6>User ID</h6>
+              </div>
+              <div>
+                <p>223344556677</p>
               </div>
               <div>
                 <p>223344556677</p>
@@ -47,10 +54,16 @@ function CustomersReports() {
               <div>
                 <p>Oja Oba</p>
               </div>
+              <div>
+                <p>Oja Oba</p>
+              </div>
             </div>
             <div className='column4'>
               <div>
                 <h6>Phone No</h6>
+              </div>
+              <div>
+                <p>0901234567</p>
               </div>
               <div>
                 <p>0901234567</p>
@@ -65,6 +78,9 @@ function CustomersReports() {
               </div>
               <div>
                 <p>Reviewed</p>
+              </div>
+              <div>
+                <p>Visited</p>
               </div>
               <div>
                 <p>Visited</p>

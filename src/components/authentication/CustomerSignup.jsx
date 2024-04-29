@@ -13,6 +13,7 @@ function CustomerSignup() {
   const [error, setError] = useState("");
   const [submittedData, setSubmittedData] = useState(null); // State to store submitted data
 
+  
   const apiUrl = "https://dishcorner.onrender.com/api/v1/auth/register";
 
   useEffect(() => {

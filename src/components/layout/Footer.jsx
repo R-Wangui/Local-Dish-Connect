@@ -15,7 +15,7 @@ function Footer() {
             </div> 
             <ul className="company">
                 <h6>COMPANY</h6>
-                <li><a href='#'>Vendors</a></li>
+                <li><a href='/vendorspage'>Vendors</a></li>
                 <li><a href='#'>Menu</a></li>
                 <li><a href='#'>Offers</a></li>
                 <li><a href='#'>Contact</a></li>

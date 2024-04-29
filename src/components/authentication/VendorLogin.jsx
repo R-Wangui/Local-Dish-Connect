@@ -97,7 +97,7 @@ function VendorLogin() {
             </div>
           
             <div style={{fontSize: "16px", fontWeight: 700, textAlign: "center", marginBottom: "30px" }}>
-              {"Don’t"} have an account? <Link to="/signup" style={{color: "rgba(255, 51, 38, 1)", fontWeight: 500}}>Sign up</Link>
+              {"Don’t"} have an account? <Link to="/vendorsignup" style={{color: "rgba(255, 51, 38, 1)", fontWeight: 500}}>Sign up</Link>
             </div>
           </Form>
           <div className="vendorloginImage">
