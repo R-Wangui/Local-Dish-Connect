@@ -3,19 +3,25 @@ import Buttons from '../components/layout/Buttons'
 import Aside from '../components/vendors dashboard/Aside'
 import VendorsDashboardNavbar from '../components/vendors dashboard/VendorsDashboardNavbar'
 
-// Vendors can navigate to theri business profile through the Aside to view or edit their profiles 
+// Vendors can navigate to their business profile through the Aside to view or edit their profiles 
 // This page can also contain verification tools (in future versions)
 
 function RestaurantInformation() {
+  const businessProfileBtn = {
+    backgroundColor: "#006B61",
+    border: "none"
+  }
   return (
     <>
         <div>
             <VendorsDashboardNavbar />
             <Aside />
             <div className='businessProfile'>
-                <h4>Restaurant Information</h4> <span><Buttons>Edit</Buttons></span>
+                <div className='title'>
+                  <h4>Restaurant Information</h4><Buttons style={businessProfileBtn}>Edit</Buttons>
+                </div>
                 <img src="\images\Navbar profile pic.png" alt="" width='60px' height='60px' />
-                <br /><hr style={{width: 'auto'}} />
+                <br /><hr style={{width: '1000px'}} />
                 <div>
                     <p>Vendor ID: LD-23456</p>
                     <hr />

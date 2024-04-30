@@ -17,7 +17,7 @@ function PopularFood() {
                 <img src="\images\Popularfood.png" />
                 <div className='foodTitle'>
                     <h6>Grilled Chicken</h6>
-                    <p>Lorem ipsum dolor</p>
+                    <p>Loved their portions.</p>
                 </div>
                 <div>
                     <Buttons style={foodButton} >150 sales </Buttons>
@@ -27,7 +27,7 @@ function PopularFood() {
                 <img src="\images\Popularfood.png" />
                 <div className='foodTitle'>
                     <h6>Grilled Chicken</h6>
-                    <p>Lorem ipsum dolor</p>
+                    <p>Loved their portions.</p>
                 </div>
                 <div>
                     <Buttons style={foodButton} >150 sales </Buttons>
@@ -37,7 +37,7 @@ function PopularFood() {
                 <img src="\images\Popularfood.png" />
                 <div className='foodTitle'>
                     <h6>Grilled Chicken</h6>
-                    <p>Lorem ipsum dolor</p>
+                    <p>Loved their portions.</p>
                 </div>
                 <div>
                     <Buttons style={foodButton} >150 sales </Buttons>

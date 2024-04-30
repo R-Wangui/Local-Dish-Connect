@@ -1250,3 +1250,8 @@ Card.Img {
   top: 96px;
   left: 300px;
 }
+.title {
+  display: inline-flex;
+  justify-content: space-between;
+  padding: 20px;
+}

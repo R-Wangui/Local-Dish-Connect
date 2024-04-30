@@ -14,7 +14,7 @@ function TopReviews() {
                 </div>
                 <img  src="\images\topreviewfood.svg" alt=""  width="75" height="75" />
             </div>
-            <p className='reviewContent'>Lorem Ipsum is simply dummy text.</p>
+            <p className='reviewContent'>The customer service was top notch.</p>
         </div>
     </>
     

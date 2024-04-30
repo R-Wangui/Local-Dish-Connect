@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState } from "react";
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Navbar from 'react-bootstrap/Navbar';
@@ -7,7 +7,7 @@ import Buttons from "../layout/Buttons";
 
 function VendorsDashboardNavbar() {
 
-  const [displayComponent, setDisplayComponent] = useState(false)
+  const [displayComponent, setDisplayComponent] = useState(false);
 
   const promotionButton= {
     backgroundColor: "white",
