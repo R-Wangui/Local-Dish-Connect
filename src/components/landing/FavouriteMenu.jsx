@@ -4,7 +4,8 @@ function FavouriteMenu() {
 
   const stylingButton ={
     marginLeft: '60px',
-    borderRadius: '100px'
+    borderRadius: '100px',
+    
   }
   return (
     <>

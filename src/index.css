@@ -683,7 +683,7 @@ Card.Img {
     margin: 40px;
   }
   .hero-tagline {
-    font-size: 56px;
+    font-size: 48px;
     font-weight: 700;
   }
   #hero-container {
@@ -706,13 +706,11 @@ Card.Img {
     top: -60px;
     left: 44px;
     height: 136px;
-    width: 304px;
-    
+    width: 304px;  
   }
   #hero-search {
     width: 280px;
-    height: 50px;
-    
+    height: 50px; 
   }
   .hero-deco {
     display: none;
@@ -728,7 +726,9 @@ Card.Img {
     display: inline-flex;
     flex-wrap: wrap;
     overflow: hidden;
-
+  }
+  #restaurantsNearby {
+    margin-top: 40px;
   }
   #restaurantsNearby h1 {
     font-family: "Montserrat", sans-serif;
@@ -736,21 +736,24 @@ Card.Img {
     font-weight: 700;
     font-size: 48px;
   }
+  #restaurantsNearby h4 {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
   .rosemary {
     position: absolute;
-    top: -128px;
+    top: -178px;
     right: 40px;
-    overflow: hidden;
+    z-index: -1;
   }
   .restaurantCards {
     display: inline-flex;
     flex-wrap: wrap;
     gap: 24px;
-    margin-left: 60px;
+    margin-left: 56px;
     margin-top: 60px;
     overflow: hidden;
   }
-
   .vendors-title {
     color: #191919;
     font-size: 48px;
@@ -762,8 +765,40 @@ Card.Img {
     font-family: "Montserrat", sans-serif;
     text-align: center;
     font-weight: 700;
-    font-size: 62px;
+    font-size: 48px;
     margin-bottom: 60px;
+  }
+  .vendorsTitle h4 {
+   margin-left: 16px;
+   margin-right: 16px;
+  }
+  /* Responsive styling for Favourite Menu section */
+  #favouriteMenu {
+    margin-top: 94px;
+    position: relative;
+    margin-bottom: 190px;
+  }
+  #favouriteMenu h1 {
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    font-weight: 700;
+    font-size: 48px;
+  }
+  #favouriteMenu h4 {
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  .menuItems {
+    gap: 16px;
+    margin: 16px;
+  }
+  .coffeepods {
+    position: absolute;
+    top: -128px;
+    left: 44px;
+    z-index: -1;
   }
   /* Styling recommended restaurant categories */
   #recommended-restaurants {
@@ -808,7 +843,7 @@ Card.Img {
  }
  .coffeePods {
   position: absolute;
-  left: 208px;
+  left: 198px;
   top: 0px;
   z-index: -2;
  }
@@ -827,37 +862,28 @@ Card.Img {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  width: 400px;
  }
  .downloadTagline h1 {
   padding-left: 12px;
   padding-right: 12px;
   font-size: 28px;
   word-wrap: break-word;
-  
  }
  .downloadTagline p {
-  font-size: 20px;
+  padding-left: 12px;
+  padding-right: 12px;
+  font-size: 16px;
+  margin-right: 12px;
+  word-wrap: break-word;
   
  }
  .downloadIcons {
   display: inline-flex;
   gap: 28px;
+  margin-left: 36px;
+  margin-bottom: 20px;
  }
-.googlePlay {
-  display: flex;
-  width: 120px;
-  height: 40px;
-  background-color: black;
-  border-radius: 6px;
-  gap: 8px;
-  padding: 8px;
-}
-.googleWords {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  overflow: hidden;
-}
   #contact-us {
     display: flex;
     flex-direction: column;
@@ -879,21 +905,20 @@ Card.Img {
     text-align: center;
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
+    margin-left: 16px;
+    margin-right: 16px;
   }
   #testimony-container {
-    width: 242px;
-    height: 84px;
+    width: 248px;
+    height: 88px;
     border-radius: 100px;
     background: #006B61;
-    /* display: flex; */
-    /* justify-content: space-between; */
     gap: 0px;
 
   }
   .testimony {
     font-size: 10px;
     margin-left: 6px;
-    word-wrap: break-word;
   }
   .testimonyand-tag {
     display: flex;
@@ -905,11 +930,13 @@ Card.Img {
     color: #FDC55E;
     margin-left: 4px;
     font-size: 8px;
+    margin-top: -12px;
   }
   .more-reviews {
     text-align: center;
     font-size: 20px;
-  
+    justify-items: center;
+    margin: 32px;
   }
 }
   /* Footer Styling */
@@ -954,6 +981,11 @@ Card.Img {
     }
     #footer-msg {
       margin-right: 0px;
+    }
+    .copyright {
+      color: #71717A;
+      text-align: center;
+      font-size: 12px;
     }
   }
   /* Styling for VENDOR'S DASHBOARD STARTS HERE*/
