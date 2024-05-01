@@ -669,6 +669,7 @@ Card.Img {
 @media only screen and (max-width: 400px) {
   body {
     overflow-x: hidden;
+    width: auto;
   }
   .me-2 {
     display: none;
@@ -689,7 +690,7 @@ Card.Img {
     display: inline-flex;
     flex-wrap: wrap;
     flex-direction: column-reverse;
-    width: 345px;
+    width: auto;
     margin: 72px 20px 20px 20px;
     border-radius: 0px 0px 23px 0px;
   }
@@ -716,21 +717,152 @@ Card.Img {
   .hero-deco {
     display: none;
   }
+  .cuisine-header {
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    font-weight: 700;
+    font-size: 48px;
+    margin-bottom: 60px;
+  }
+  .allCuisines {
+    display: inline-flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+
+  }
+  #restaurantsNearby h1 {
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    font-weight: 700;
+    font-size: 48px;
+  }
+  .rosemary {
+    position: absolute;
+    top: -128px;
+    right: 40px;
+    overflow: hidden;
+  }
+  .restaurantCards {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-left: 60px;
+    margin-top: 60px;
+    overflow: hidden;
+  }
+
+  .vendors-title {
+    color: #191919;
+    font-size: 48px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+  .vendorsTitle h1 {
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    font-weight: 700;
+    font-size: 62px;
+    margin-bottom: 60px;
+  }
+  /* Styling recommended restaurant categories */
+  #recommended-restaurants {
+    margin-top: 96px;
+    align-items: center;
+  }
+  .recommended-header {
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 60px;
+  }
+  .restaurant1 {
+    margin-bottom: 40px;
+    margin-left: -60px;
+  }
+  /* Responsive styling for download section */
   #download-app {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    /* padding: 20px; */
+    gap: 8px;
    }
-  .downloadTagline {
-    padding-left: 40px;
-    padding-top: 20px;
-   }
+   .download-arc {
+    width: 397px;
+    height: 402px;
+  }
+  .download-Arc {
+    width: 340px;
+    height: 402px;
+    position: absolute;
+    left: 28px;
+  }
+ .download-image {
+  position: absolute;
+  left: 68px;
+  height: 380px;
+  width: 260px;
+  top: 20px;
+ }
+ .coffeePods {
+  position: absolute;
+  left: 208px;
+  top: 0px;
+  z-index: -2;
+ }
+ .herb-image {
+  position: absolute;
+  left: 68px;
+  top: 300px;
+  width: 160px;
+  height: 120px;
+  z-index: 2;
+ }
+ .downloadTagline {
+  padding-top: 8px;
+  padding-left: 8px;
+  margin-top: -120px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+ }
+ .downloadTagline h1 {
+  padding-left: 12px;
+  padding-right: 12px;
+  font-size: 28px;
+  word-wrap: break-word;
+  
+ }
+ .downloadTagline p {
+  font-size: 20px;
+  
+ }
+ .downloadIcons {
+  display: inline-flex;
+  gap: 28px;
+ }
+.googlePlay {
+  display: flex;
+  width: 120px;
+  height: 40px;
+  background-color: black;
+  border-radius: 6px;
+  gap: 8px;
+  padding: 8px;
+}
+.googleWords {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  overflow: hidden;
+}
   #contact-us {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* margin-top: 72px;
-    padding-top: 40px; */
+    padding: 20px;
     text-align: center;
   }
   #testimonials {

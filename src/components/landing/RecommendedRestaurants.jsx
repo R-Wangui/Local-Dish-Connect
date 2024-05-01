@@ -50,7 +50,7 @@ function RecommendedRestautants() {
                         <p className='price'>$10</p>
                     </div>
                 </div>
-                <div>
+                <div className='restaurant1'> 
                     <svg xmlns="http://www.w3.org/2000/svg" width="250" height="250" viewBox="0 0 250 250" fill="none" className='arc'>
                         {/* Circle with gradient stroke */}
                         <circle cx="125.035" cy="120.965" r="116.153" transform="rotate(178.687 125.035 124.965)" stroke="url(#paint0_linear_315_3727)" strokeWidth="16" />
@@ -83,7 +83,7 @@ function RecommendedRestautants() {
                         <p className='price'>$10</p>
                     </div>
                 </div>
-                <div>
+                <div className='restaurant1'>
                     <svg xmlns="http://www.w3.org/2000/svg" width="250" height="250" viewBox="0 0 250 250" fill="none" className='arc'>
                         {/* Circle with gradient stroke */}
                         <circle cx="125.035" cy="120.965" r="116.153" transform="rotate(178.687 125.035 124.965)" stroke="url(#paint0_linear_315_3727)" strokeWidth="16" />
@@ -116,7 +116,7 @@ function RecommendedRestautants() {
                         <p className='price'>$10</p>
                     </div>
                 </div>
-                <div>
+                <div className='restaurant1'>
                     <svg xmlns="http://www.w3.org/2000/svg" width="250" height="250" viewBox="0 0 250 250" fill="none" className='arc'>
                         {/* Circle with gradient stroke */}
                         <circle cx="125.035" cy="120.965" r="116.153" transform="rotate(178.687 125.035 124.965)" stroke="url(#paint0_linear_315_3727)" strokeWidth="16" />
@@ -149,7 +149,7 @@ function RecommendedRestautants() {
                         <p className='price'>$10</p>
                     </div>
                 </div>
-                <div>
+                <div className='restaurant1'>
                     <svg xmlns="http://www.w3.org/2000/svg" width="250" height="250" viewBox="0 0 250 250" fill="none" className='arc'>
                         {/* Circle with gradient stroke */}
                         <circle cx="125.035" cy="120.965" r="116.153" transform="rotate(178.687 125.035 124.965)" stroke="url(#paint0_linear_315_3727)" strokeWidth="16" />
@@ -182,7 +182,7 @@ function RecommendedRestautants() {
                         <p className='price'>$10</p>
                     </div>
                 </div>
-                <div>
+                <div className='restaurant1'>
                     <svg xmlns="http://www.w3.org/2000/svg" width="250" height="250" viewBox="0 0 250 250" fill="none" className='arc'>
                         {/* Circle with gradient stroke */}
                         <circle cx="125.035" cy="120.965" r="116.153" transform="rotate(178.687 125.035 124.965)" stroke="url(#paint0_linear_315_3727)" strokeWidth="16" />

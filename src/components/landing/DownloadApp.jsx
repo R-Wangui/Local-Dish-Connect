@@ -5,7 +5,7 @@ function DownloadApp() {
     <>
         <div id='download-app'>
             <div className='downloadArc'>
-                <svg xmlns="http://www.w3.org/2000/svg" width="597" height="602" viewBox="0 0 250 250" fill="none" >
+                <svg xmlns="http://www.w3.org/2000/svg" width="597" height="602" viewBox="0 0 250 250" fill="none" className='download-Arc' >
                     {/* Circle with gradient stroke */}
                     <circle cx="125.035" cy="110.965" r="116.153" transform="rotate(178.687 125.035 124.965)" stroke="url(#paint0_linear_315_3727)" strokeWidth="16" />
                     {/* Image clipped inside the circle */}
@@ -24,7 +24,7 @@ function DownloadApp() {
                 </svg>
             </div>
             <img className='download-image' src="\images\Chef-downloadapp.png" alt="chef" />
-            <img className='coffeePods' src="\images\Coffee-downloadapp.png" alt="coffee-pods" dth="180" height="180" />
+            <img className='coffeePods' src="\images\Coffee-downloadapp.png" alt="coffee-pods" width="180" height="180" />
             <img className='herb-image' src="\images\Herb-downloadapp.png" alt="corriander-herb" />
             <div className='downloadTagline'>
                 <h1><span>"</span><span style={{color: '#FDC55E'}}>Unlock</span><span> a world of </span><span style={{color: '#FDC55E'}}>convenience</span><span> and culinary delights With our mobile </span><span style={{color: '#FDC55E'}}>app</span><span> today!"</span></h1>
