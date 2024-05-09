@@ -1,66 +1,77 @@
-import React from 'react'
-import { FaAngleDown } from 'react-icons/fa'
+import React from "react";
+import { FaAngleDown } from 'react-icons/fa';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from "recharts";
 
-// Initially named Total Revenue
-function TotalVisits() {
+const data = [
+  {
+    name: "Jan",
+    uv: 4000,
+    visits: 30000,
+    amt: 30000
+  },
+  {
+    name: "Feb",
+    uv: 3000,
+    visits: 20000,
+    amt: 2000
+  },
+  {
+    name: "Mar",
+    uv: 2000,
+    visits: 48000,
+    amt: 48000
+  },
+  {
+    name: "Apr",
+    uv: 2780,
+    visits: 24000,
+    amt: 2400
+  },
+  {
+    name: "May",
+    uv: 1890,
+    visits: 30000,
+    amt: 3000
+  },
+  {
+    name: "Jun",
+    uv: 2390,
+    visits: 38000,
+    amt: 3
+  }
+];
+
+ function TotalVisits() {
+// Initially knowm as Total Revenue
   return (
     <>
-        <div id='revenueContainer'>
-            <div className='revenueTitle'>
-                <h4>Total No. of Visits</h4>
-                <p>Order activity this year</p><span className='month'>Monthly <FaAngleDown /> </span>
-            </div>
-            <div className='revenue'>
-                <div>50k+</div>
-                <div>40k+</div>
-                <div>30k+</div>
-                <div>20k+</div>
-                <div>10k+</div>
-            </div>
-            <div className='revenueBars'>
-                <div style={{width: 329.03, height: 0, left: 0, top: 121.04, position: 'absolute', border: '0.50px #9FA7AA solid'}}></div>
-                <div style={{width: 329.03, height: 0, left: 0, top: 151, position: 'absolute', border: '0.50px #9FA7AA solid'}}></div>
-                <div style={{width: 329.03, height: 0, left: 0, top: 90.84, position: 'absolute', border: '0.50px #9FA7AA solid'}}></div>
-                <div style={{width: 329.03, height: 0, left: 0, top: 60.40, position: 'absolute', border: '0.50px #9FA7AA solid'}}></div>
-                <div style={{width: 329.03, height: 0, left: 0, top: 30.20, position: 'absolute', border: '0.50px #9FA7AA solid'}}></div>
-                <div style={{width: 329.03, height: 0, left: 0, top: 0, position: 'absolute', border: '0.50px #9FA7AA solid'}}></div>
-                {/* The bars start here */}
-                <div style={{left: 7.31, position: 'absolute'}}>
-                    <div style={{width: 22.65, height: 150.77, left: 0, top: 0, position: 'absolute', background: 'rgba(0, 107, 97, 0.17)'}}></div>
-                    <div className='animated-bar' style={{height: 47.76, top: 103.01, position: 'absolute', background: '#006B61', transition: 'height 1s ease'}}></div>
-                </div>
-                <div style={{left: 61.96, position: 'absolute'}}>
-                    <div style={{width: 22.65, height: 151, left: 0, top: 0, position: 'absolute', background: 'rgba(0, 107, 97, 0.17)'}}></div>
-                    <div className='animated-bar' style={{width: 22.65, height: 35.12, left: 0, top: 115.88, position: 'absolute', background: '#006B61'}}></div>
-                </div>
-                <div style={{left: 116.61, position: 'absolute'}}>
-                    <div style={{width: 22.65, height: 150.76, left: 0, top: 0, position: 'absolute', background: 'rgba(0, 107, 97, 0.17)'}}></div>
-                    <div className='animated-bar' style={{width: 22.65, height: 107.69, left: 0, top: 43.07, position: 'absolute', background: '#006B61'}}></div>
-                </div>
-                <div style={{left: 171.26, position: 'absolute'}}>
-                    <div style={{width: 22.65, height: 150.77, left: 0, top: 0, position: 'absolute', background: 'rgba(0, 107, 97, 0.17)'}}></div>
-                    <div style={{width: 22.65, height: 60.63, left: 0, top: 90.13, position: 'absolute', background: '#006B61'}}></div>
-                </div>
-                <div style={{left: 225.91, position: 'absolute'}}>
-                    <div style={{width: 22.65, height: 150.77, left: 0, top: 0, position: 'absolute', background: 'rgba(0, 107, 97, 0.17)'}}></div>
-                    <div style={{width: 22.65, height: 85.68, left: 0, top: 65.08, position: 'absolute', background: '#006B61'}}></div>
-                </div>
-                <div style={{left: 280.56, position: 'absolute'}}>
-                    <div style={{width: 22.65, height: 151, left: 0, top: 0, position: 'absolute', background: 'rgba(0, 107, 97, 0.17)'}}></div>
-                    <div style={{width: 22.65, height: 126.42, left: 0, top: 24.58, position: 'absolute', background: '#006B61'}}></div>
-                </div>
-                <div className='monthsRevenue'>
-                    <div>Jan</div>
-                    <div>Feb</div>
-                    <div>Mar</div>
-                    <div>Apr</div>
-                    <div>May</div>
-                    <div>Jun</div>
-                </div>
-            </div>
+    <div id='revenueContainer'>
+        <div className='revenueTitle'>
+            <h4>Total NO. of visits</h4>
+            <p>Order activity this year</p><span className='month'>Monthly <FaAngleDown /> </span>
         </div>
+        <div>
+            <BarChart
+            style={{height: '272px', top: 44, left: 0, right: 0, bottom: 0, gap: 8, position: 'absolute', fontSize: 12}}
+            width={400}
+            height={242}
+            data={data}
+            margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+            barSize={20}
+            >
+                <XAxis dataKey="name" scale="point" padding={{ left: 10, right: 10 }}/>
+                <YAxis />
+                <Tooltip />
+                <Legend />
+                <CartesianGrid strokeDasharray="3 3" />
+                <Bar dataKey="visits" fill="#006B61" background={{ fill: "#eee" }} />
+            </BarChart>
+        </div>
+
+    </div>
     </>
-  )
+  );
 }
 
-export default TotalVisits
+
+export default TotalVisits;

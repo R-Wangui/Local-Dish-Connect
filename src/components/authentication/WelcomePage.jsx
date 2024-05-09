@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 
 function WelcomePage() {
 
-    const styleWelcomeBtn = {
-        backgroundColor: '#FDC55E',
-        border: 'none',
-    }
+    // const styleWelcomeBtn = {
+    //     backgroundColor: '#FDC55E',
+    //     border: 'none',
+    // }
     const welcomeBtnStyle = {
         border: '1px solid #FDC55E',
         color: 'black',
@@ -22,7 +22,7 @@ function WelcomePage() {
                         <h1><span>Welcome To </span><br/><span style={{color: '#FDC55E'}}> Local Dish Corner! </span></h1>
                         <h5>Get start with us as a </h5>
                     </div>
-                    <Buttons type="submit" size='lg' style={styleWelcomeBtn}><Link to='/vendorsignup' style={{textDecoration: 'none', color: 'black'}}  >Vendor <img src="/images/arrow-right.svg" alt="" /></Link></Buttons>
+                    <Buttons type="submit" size='lg' variant="outline-warning" style={welcomeBtnStyle}><Link to='/vendorsignup' style={{textDecoration: 'none', color: 'black'}}  >Vendor <img src="/images/arrow-right.svg" alt="" /></Link></Buttons>
                     <Buttons type="submit" size='lg' variant="outline-warning" style={welcomeBtnStyle}><Link to='/customersignup' style={{textDecoration: 'none', color: 'black'}}  >Customer <img src="/images/arrow-right.svg" alt="" /></Link></Buttons>
                     <Buttons type="submit" size='lg' variant="outline-warning" style={welcomeBtnStyle}>Guest <img src="/images/arrow-right.svg" alt="" /></Buttons>
                     <p>Already have an account? <Link to="/vendorlogin" style={{color:"#FF3326"}}> Vendor Login</Link> OR <Link to="/customerlogin" style={{color:"#FF3326"}}> Customer Login</Link></p>
