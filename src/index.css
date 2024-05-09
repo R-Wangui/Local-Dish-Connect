@@ -1290,15 +1290,17 @@ Card.Img {
   align-items: flex-start;
   border: 1px solid #F5C83B;
   border-radius: 8px;
-  width: 280px;
+  width: 300px;
   height: 96px;
   position: absolute;
   top: 170px;
-  right: 380px;
+  right: 360px;
   padding: 12px;
+  gap: 0;
 }
 .clicksTitle {
   font-size: 12px; 
+  width: 80px;
 }
 /* Styling for the Income Section */
 #incomeContainer {
@@ -1307,11 +1309,11 @@ Card.Img {
   align-items: flex-start;
   border: 1px solid #006B61;
   border-radius: 8px;
-  width: 280px;
+  width: 300px;
   height: 96px;
   position: absolute;
   top: 270px;
-  right: 380px;
+  right: 360px;
   padding: 12px;
 }
 .incomeTitle {
@@ -1324,11 +1326,11 @@ Card.Img {
   align-items: flex-start;
   border: 1px solid #FF7622;
   border-radius: 8px;
-  width: 280px;
+  width: 300px;
   height: 96px;
   position: absolute;
   top: 370px;
-  right: 380px;
+  right: 360px;
   padding: 12px;
 }
 .customerRatingsTitle {

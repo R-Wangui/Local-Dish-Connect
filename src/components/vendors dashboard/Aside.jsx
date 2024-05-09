@@ -9,7 +9,7 @@ function Aside() {
         <div id='vendorAside'>
             <div className='analytics'>
                 <span className='aside-icon'><FaHouse /></span>
-                <span style={{marginLeft: '12px'}}> <Link to="/vendorsdashboard" style={{color:"white", textDecoration: "none"}}>Dashboard</Link></span>   
+                <span style={{marginLeft: '12px'}}> <Link to="/vendorsdashboard" style={{color:"black", textDecoration: "none"}}>Dashboard</Link></span>   
             </div>
             <div>
                 <span className='asideIcon'><FaBusinessTime /></span>
