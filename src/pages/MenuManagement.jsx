@@ -6,6 +6,18 @@ function MenuManagement() {
   return (
     <>
         <Aside />
+        <div id='menuManagement'>
+          <div className='title'>
+            <h4>Menu Management</h4> <Buttons style={businessProfileBtn}>Add Food</Buttons><Buttons style={businessProfileBtn}>Edit</Buttons>
+          </div>
+          <div>
+            <h4>Menu Food</h4>
+            <h4>Menu Categories</h4>
+          </div>
+          <div>
+            
+          </div>
+        </div>
         {/* <div id='menuManagement'>
             <div>
                 <h4>Menu Management</h4>

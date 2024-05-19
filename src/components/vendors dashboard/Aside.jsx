@@ -1,9 +1,19 @@
 import React from 'react'
 import { FaAward, FaBookOpen, FaComment, FaQuestion, FaSignOutAlt, FaStar, FaTools } from 'react-icons/fa'
 import { FaBusinessTime, FaHouse } from 'react-icons/fa6';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 function Aside() {
+    const location = useLocation();
+    // Styling the active link
+
+    // const navLinksStyle = ({ isActive }) => {
+    //     return {
+    //         backgroundColor: isActive ? "#FDC55E" : "none",
+    //         borderRadius: isActive ? "16px" : "none"
+    //     }
+    // }
+    
   return (
     <>
         <div id='vendorAside'>
