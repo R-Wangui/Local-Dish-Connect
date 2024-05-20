@@ -27,7 +27,7 @@ function Aside() {
             </div>
             <div>
                 <span className='asideIcon'><FaBookOpen /></span>
-                <span style={{marginLeft: '12px'}}> Menu Management</span>
+                <span style={{marginLeft: '12px'}}><Link to="/menumanagement" style={{color:"white", textDecoration: "none"}}>Menu Management</Link></span>
             </div>
             <div>
                 <span className='asideIcon'><FaAward /></span>

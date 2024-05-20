@@ -1422,3 +1422,19 @@ Card.Img {
   justify-content: space-between;
   padding: 20px;
 }
+/* Styling for the Menu Management page */
+#menuManagement {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 96px;
+  left: 300px;
+  margin-right: 360px;
+  
+}
+.menuTitle {
+  display: inline-flex;
+  justify-content: space-between;
+  gap: 80px;
+  padding: 20px;
+}

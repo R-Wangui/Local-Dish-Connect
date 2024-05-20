@@ -30,6 +30,7 @@ function App() {
           <Route path='/landing' element={<Landing />}></Route>
           <Route path='/vendorspage' element={<VendorsPage />}></Route>
           <Route path='/businessprofile' element={<BusinessProfile />}></Route>
+          <Route path='/menumanagement' element={<MenuManagement />}></Route>
         </Routes>
       </Router> 
       
