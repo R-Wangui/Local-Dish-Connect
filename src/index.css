@@ -1424,17 +1424,63 @@ Card.Img {
 }
 /* Styling for the Menu Management page */
 #menuManagement {
-  display: flex;
-  flex-direction: column;
+  width: 80%;
+  background-color: white;
   position: absolute;
   top: 96px;
-  left: 300px;
-  margin-right: 360px;
-  
+  left: 250px;
+  margin: 20px;
+  border: 1px solid gray;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 .menuTitle {
   display: inline-flex;
-  justify-content: space-between;
-  gap: 80px;
+  /* flex-direction: column; */
+  /* justify-content: space-between; */
+  gap: 500px;
   padding: 20px;
+  
 }
+.chooseTab {
+  display: inline-flex;
+  gap: 80px;
+  padding-left: 20px;
+}
+.menuDetails {
+  display: inline-flex;
+  gap: 80px;
+}
+.menuEntry {
+  display: flex;
+  gap: 88px;
+  padding-left: 12px;
+}
+.menuItem {
+  display: flex;
+  gap: 98px;
+  font-size: 14px;
+  padding-left: 12px;
+}
+.menuEntry1 {
+  padding-right: 60px;
+  font-size: 14px;
+  background-color: #F54748;
+}
+.menuManagementImage {
+  display: flex;
+  flex-direction: column;
+}
+.menuIcons {
+  font-size: 24px;
+  color: #006B61;
+}
+.menuIcon {
+  font-size: 20px;
+  background-color: red;
+  color: white;
+  margin: 8px;
+  
+}
+/* style={{ fontSize: '24px' }} */
+/* style={{width: '1040px'}} */
