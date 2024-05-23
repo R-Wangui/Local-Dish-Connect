@@ -1430,14 +1430,12 @@ Card.Img {
   top: 96px;
   left: 250px;
   margin: 20px;
-  border: 1px solid gray;
+  /* border: 1px solid gray; */
   border-radius: 8px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 .menuTitle {
   display: inline-flex;
-  /* flex-direction: column; */
-  /* justify-content: space-between; */
   gap: 500px;
   padding: 20px;
   
@@ -1451,36 +1449,66 @@ Card.Img {
   display: inline-flex;
   gap: 80px;
 }
+.menuItem {
+  display: flex;
+  justify-content: space-between;
+  gap: 98px;
+  font-size: 14px;
+  padding-left: 12px;
+  /* border-bottom: 1px solid gray; */
+}
+/* Styling for the toggle icons */
+.menuOn {
+  font-size: 24px;
+  color: #006B61;
+}
+.menuOff {
+  font-size: 24px;
+  color: #6B7280;
+  fill: #6B7280;
+}
+/* Styling the icons for the Action section */
+.menuActive {
+  font-size: 20px;
+  background-color: red;
+  padding: 4px 8px 4px 8px;
+  color: white;
+  margin: 8px;
+  border-radius: 4px;
+}
+.menuInactive {
+  font-size: 20px;
+  background-color: rgb(212, 210, 210);
+  padding: 4px 8px 4px 8px;
+  color: white;
+  margin: 8px;
+  border-radius: 4px;
+}
+
+/* styling for the alternative outlook for the menu management section */
+/* .menuEntry1 {
+  padding-right: 60px;
+  font-size: 14px;
+  background-color: #F54748;
+} */
 .menuEntry {
   display: flex;
   gap: 88px;
   padding-left: 12px;
 }
-.menuItem {
-  display: flex;
-  gap: 98px;
-  font-size: 14px;
-  padding-left: 12px;
-}
-.menuEntry1 {
-  padding-right: 60px;
-  font-size: 14px;
-  background-color: #F54748;
-}
 .menuManagementImage {
   display: flex;
   flex-direction: column;
 }
-.menuIcons {
-  font-size: 24px;
-  color: #006B61;
-}
-.menuIcon {
+
+/* .menuIcon {
   font-size: 20px;
   background-color: red;
   color: white;
   margin: 8px;
-  
-}
+  border-radius: 4px;
+} */
+
+
 /* style={{ fontSize: '24px' }} */
 /* style={{width: '1040px'}} */
