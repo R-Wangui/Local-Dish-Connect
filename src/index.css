@@ -1444,10 +1444,12 @@ Card.Img {
   display: inline-flex;
   gap: 80px;
   padding-left: 20px;
+  background-color: #006B61;
 }
 .menuDetails {
   display: inline-flex;
   gap: 80px;
+  padding-left: 20px;
 }
 .menuItem {
   display: flex;
@@ -1465,7 +1467,6 @@ Card.Img {
 .menuOff {
   font-size: 24px;
   color: #6B7280;
-  fill: #6B7280;
 }
 /* Styling the icons for the Action section */
 .menuActive {
@@ -1486,11 +1487,11 @@ Card.Img {
 }
 
 /* styling for the alternative outlook for the menu management section */
-/* .menuEntry1 {
+.menuEntry1 {
   padding-right: 60px;
   font-size: 14px;
   background-color: #F54748;
-} */
+}
 .menuEntry {
   display: flex;
   gap: 88px;
@@ -1500,14 +1501,13 @@ Card.Img {
   display: flex;
   flex-direction: column;
 }
-
-/* .menuIcon {
+.menuIcon {
   font-size: 20px;
   background-color: red;
   color: white;
   margin: 8px;
   border-radius: 4px;
-} */
+}
 
 
 /* style={{ fontSize: '24px' }} */
