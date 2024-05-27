@@ -27,8 +27,8 @@ function MenuManagement() {
           </div>
         </div>
         <hr  />
-        <div className='chooseTab'>
-          <h6>Menu Food</h6>
+        <div>
+          <h6 className='chooseTab'>Menu Food</h6>
           <h6>Menu Categories</h6>
         </div>
         <hr />
