@@ -46,8 +46,6 @@ function MenuManagement() {
               <img src="\images\menumanagementfoodimage.png" alt="food image" />
               <p>Soup</p>
               <p>1,500</p>
-              <FaToggleOn className='menuOn'></FaToggleOn>
-              <span ><span className='menuInactive'><FaEdit></FaEdit></span><span className='menuActive'><FaRegTrashAlt></FaRegTrashAlt></span></span>
             </div>
             <hr />
             <div className='menuItem'>
@@ -56,8 +54,6 @@ function MenuManagement() {
               <p>Afang soup</p>
               <p>Soup</p>
               <p>2,000</p>
-              <FaToggleOff className='menuOff'></FaToggleOff>
-              <span><span className='menuInactive'><FaEdit></FaEdit></span><span className='menuActive'><FaRegTrashAlt></FaRegTrashAlt></span></span>
             </div>
             <hr />
             <div className='menuItem'>
@@ -66,8 +62,6 @@ function MenuManagement() {
               <p>Pounded yam</p>
               <p>Swallow</p>
               <p>3,000</p>
-              <FaToggleOff className='menuOff'></FaToggleOff>
-              <span><span className='menuActive'><FaEdit></FaEdit></span><span className='menuInactive'><FaRegTrashAlt></FaRegTrashAlt></span></span>
             </div>
             <hr />
             <div className='menuItem'>
@@ -76,8 +70,6 @@ function MenuManagement() {
               <p>Ofada Rice</p>
               <p>Rice</p>
               <p>2,500</p>
-              <FaToggleOn className='menuOn'></FaToggleOn>
-              <span><span className='menuActive'><FaEdit></FaEdit></span><span className='menuInactive'><FaRegTrashAlt></FaRegTrashAlt></span></span>
             </div>
             <hr />
             <div className='menuItem'>
@@ -86,8 +78,6 @@ function MenuManagement() {
               <p>Coconut Rice</p>
               <p>Rice</p>
               <p>3,500</p>
-              <FaToggleOn className='menuOn'></FaToggleOn>
-              <span><span className='menuActive'><FaEdit></FaEdit></span><span className='menuInactive'><FaRegTrashAlt></FaRegTrashAlt></span></span>
             </div>
             <hr />
             <div className='menuItem'>
@@ -96,8 +86,6 @@ function MenuManagement() {
               <p>Jollof Rice</p>
               <p>Rice</p>
               <p>2,000</p>
-              <FaToggleOn className='menuOn'></FaToggleOn>
-              <span><span className='menuInactive'><FaEdit></FaEdit></span><span className='menuActive'><FaRegTrashAlt></FaRegTrashAlt></span></span>
             </div>
             <hr />
             <div className='menuItem'>
@@ -106,8 +94,6 @@ function MenuManagement() {
               <p>Ogbono soup</p>
               <p>Soup</p>
               <p>2,000</p>
-              <FaToggleOff className='menuOff'></FaToggleOff>
-              <span><span className='menuInactive'><FaEdit></FaEdit></span><span className='menuActive'><FaRegTrashAlt></FaRegTrashAlt></span></span>
             </div>
             <hr />
             <div className='menuItem'>
@@ -116,8 +102,6 @@ function MenuManagement() {
               <p>Ofe Nsala</p>
               <p>Soup</p>
               <p>3,500</p>
-              <FaToggleOn className='menuOn'></FaToggleOn>
-              <span><span className='menuInactive'><FaEdit></FaEdit></span><span className='menuActive'><FaRegTrashAlt></FaRegTrashAlt></span></span>
             </div>
             <hr />
             <div className='menuItem'>
@@ -126,8 +110,6 @@ function MenuManagement() {
               <p>Banga Soup</p>
               <p>Soup</p>
               <p>2,500</p>
-              <FaToggleOn className='menuOn'></FaToggleOn>
-              <span><span className='menuInactive'><FaEdit></FaEdit></span><span className='menuActive'><FaRegTrashAlt></FaRegTrashAlt></span></span>
             </div>
             <hr />
             <div className='menuItem'>
@@ -136,8 +118,6 @@ function MenuManagement() {
               <p>Eba</p>
               <p>Swallow</p>
               <p>2,500</p>
-              <FaToggleOn className='menuOn'></FaToggleOn>
-              <span><span className='menuInactive'><FaEdit></FaEdit></span><span className='menuActive'><FaRegTrashAlt></FaRegTrashAlt></span></span>
             </div>
           </div>
         </div>
