@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import Buttons from "../layout/Buttons";
 import Vector from "../vector/Vector";
 import axios from "axios";
+import LoadingPage from "../../pages/LoadingPage";
+
 
 function CustomerSignup() {
   const [firstname, setFirstName] = useState("");
@@ -12,6 +14,7 @@ function CustomerSignup() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [submittedData, setSubmittedData] = useState(null); // State to store submitted data
+  const [loading, setLoading] = useState(false)
 
   
   const apiUrl = "https://dishcorner.onrender.com/api/v1/auth/register";
@@ -33,32 +36,40 @@ function CustomerSignup() {
     e.preventDefault();
 
     if (!email || !password || !firstname || !lastname) {
-      setError("Please enter username, email, and password");
+      setError("Please enter all the required fields");
       return;
     } else if (!validEmail(email)) {
       setError("Please enter a valid email address");
       return;
-    } else {
+    } 
+      setLoading(true);
       try {
         const response = await axios.post(apiUrl, {
-          firstname: firstname,
-          lastname: lastname,
-          email: email,
-          password: password,
+          firstname,
+          lastname,
+          email,
+          password,
         });
         console.log(response.data);
         setSubmittedData(response.data); // Update state with submitted data
+        // navigate("/landing"); // Navigate to the landing page on success
       } catch (error) {
         console.error("An error occurred:", error.response);
         setError("An error occurred. Please try again.");
+      } finally {
+        setLoading(false);
       }
-    }
+    
+    
   };
 
   const validEmail = (email) => {
     const re = /\S+@\S+\.\S+/;
     return re.test(email);
   };
+  if (loading) {
+    return <LoadingPage />; // Render the Loading page component if loading
+  }
 
   const styleTheButton = {
     backgroundColor: "#FDC55E",

@@ -14,6 +14,7 @@ import CustomerForgotPassword from './components/authentication/CustomerForgotPa
 import VendorForgotPassword from './components/authentication/VendorForgotPassword';
 import VendorChangePassword from './components/authentication/VendorChangePassword';
 import MenuManagement from './pages/MenuManagement';
+import LoadingPage from './pages/LoadingPage';
 
 
 function App() {
@@ -31,6 +32,8 @@ function App() {
           <Route path='/vendorspage' element={<VendorsPage />}></Route>
           <Route path='/businessprofile' element={<BusinessProfile />}></Route>
           <Route path='/menumanagement' element={<MenuManagement />}></Route>
+          <Route path='/loadingpage' element={<LoadingPage />}></Route>
+
         </Routes>
       </Router> 
       
