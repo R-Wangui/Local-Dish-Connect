@@ -35,6 +35,7 @@ function CustomerSignup() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    setLoading(true);
     if (!email || !password || !firstname || !lastname) {
       setError("Please enter all the required fields");
       return;
@@ -42,7 +43,7 @@ function CustomerSignup() {
       setError("Please enter a valid email address");
       return;
     } 
-      setLoading(true);
+      
       try {
         const response = await axios.post(apiUrl, {
           firstname,
