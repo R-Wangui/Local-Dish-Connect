@@ -6,12 +6,12 @@ function Hero() {
     <>
         <div className="arrows-hero">
             <svg xmlns="http://www.w3.org/2000/svg" width="184" height="207" viewBox="0 0 184 207" fill="none" className="arrow1">
-                <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M169.904 198.394L164.003 205.223C163.641 205.642 163.035 205.662 162.651 205.268L156.378 198.844C155.993 198.45 155.975 197.79 156.337 197.371C156.699 196.952 157.304 196.932 157.689 197.326L163.265 203.037L168.51 196.967C168.872 196.548 169.478 196.527 169.863 196.922C170.248 197.316 170.266 197.975 169.904 198.394Z" fill="#F54748"/>
-                <path opacity="0.5" d="M14.2698 1.39746C79.6932 13.3342 144.795 30.4523 163.728 196.076" stroke="#F54748" stroke-width="2" stroke-dasharray="8 8"/>
+                <path opacity="0.5" fillRule="evenodd" clipRule="evenodd" d="M169.904 198.394L164.003 205.223C163.641 205.642 163.035 205.662 162.651 205.268L156.378 198.844C155.993 198.45 155.975 197.79 156.337 197.371C156.699 196.952 157.304 196.932 157.689 197.326L163.265 203.037L168.51 196.967C168.872 196.548 169.478 196.527 169.863 196.922C170.248 197.316 170.266 197.975 169.904 198.394Z" fill="#F54748"/>
+                <path opacity="0.5" d="M14.2698 1.39746C79.6932 13.3342 144.795 30.4523 163.728 196.076" stroke="#F54748" strokeWidth="2" stroke-dasharray="8 8"/>
             </svg>
             <svg xmlns="http://www.w3.org/2000/svg" width="240" height="276" viewBox="0 0 240 276" fill="none" className="arrow2">
-                <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M130.485 253.245L121.896 252.559C121.369 252.517 120.973 252.017 121.012 251.444L121.642 242.093C121.681 241.519 122.139 241.088 122.667 241.13C123.194 241.172 123.589 241.672 123.551 242.245L122.991 250.557L130.625 251.167C131.152 251.209 131.548 251.709 131.509 252.282C131.471 252.856 131.012 253.287 130.485 253.245Z" fill="#F54748"/>
-                <path opacity="0.5" d="M113.754 16.9453C155.61 61.6117 194.759 109.965 129.432 243.804" stroke="#F54748" stroke-width="2" stroke-dasharray="8 8"/>
+                <path opacity="0.5" fillRule="evenodd" clipRule="evenodd" d="M130.485 253.245L121.896 252.559C121.369 252.517 120.973 252.017 121.012 251.444L121.642 242.093C121.681 241.519 122.139 241.088 122.667 241.13C123.194 241.172 123.589 241.672 123.551 242.245L122.991 250.557L130.625 251.167C131.152 251.209 131.548 251.709 131.509 252.282C131.471 252.856 131.012 253.287 130.485 253.245Z" fill="#F54748"/>
+                <path opacity="0.5" d="M113.754 16.9453C155.61 61.6117 194.759 109.965 129.432 243.804" stroke="#F54748" strokeWidth="2" stroke-dasharray="8 8"/>
             </svg>
         </div>
         <div id="hero-container">
@@ -122,8 +122,8 @@ function Hero() {
                 <path d="M173.159 164.939C172.037 166.529 170.623 167.036 169.004 166.047C167.597 165.187 167.232 163.802 168.028 162.27C168.917 160.538 170.385 159.919 172.076 160.791C173.738 161.661 174.015 163.138 173.159 164.939Z" fill="#FFE8C8"/>
             </g>
             <defs>
-                <filter id="filter0_f_315_3963" x="34.6488" y="21.4192" width="165.669" height="166.991" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <filter id="filter0_f_315_3963" x="34.6488" y="21.4192" width="165.669" height="166.991" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
                 <feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_315_3963"/>
                 </filter>

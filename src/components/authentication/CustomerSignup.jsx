@@ -19,50 +19,56 @@ function CustomerSignup() {
   
   const apiUrl = "https://dishcorner.onrender.com/api/v1/auth/register";
 
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  const fetchData = async () => {
-    try {
-      const response = await axios.get(apiUrl);
-      setSubmittedData(response.data);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    setError("");
+  
+    // Set loading state to true at the beginning of the function
     setLoading(true);
+  
     if (!email || !password || !firstname || !lastname) {
       setError("Please enter all the required fields");
+      setLoading(false); // Reset loading state
       return;
     } else if (!validEmail(email)) {
       setError("Please enter a valid email address");
+      setLoading(false); // Reset loading state
       return;
-    } 
-      
-      try {
-        const response = await axios.post(apiUrl, {
-          firstname,
-          lastname,
-          email,
-          password,
-        });
-        console.log(response.data);
-        setSubmittedData(response.data); // Update state with submitted data
-        // navigate("/landing"); // Navigate to the landing page on success
-      } catch (error) {
-        console.error("An error occurred:", error.response);
-        setError("An error occurred. Please try again.");
-      } finally {
+    }
+  
+    try {
+      // Log values to debug
+      console.log("Submitting data:", {
+        firstname,
+        lastname,
+        email,
+        password,
+      });
+  
+      const response = await axios.post(apiUrl, {
+        firstname,
+        lastname,
+        email,
+        password,
+      });
+      setSubmittedData(response.data);
+  
+      // Delay navigation and state reset by 3 seconds
+      setTimeout(() => {
+        setLoading(false); // Reset loading state
+      }, 5000);
+  
+    } catch (error) {
+      console.error("An error occurred:", error.response || error.message);
+      setError("An error occurred. Please try again.");
+  
+      // Ensure loading state is reset after 3 seconds even in case of error
+      setTimeout(() => {
         setLoading(false);
-      }
-    
-    
+      }, 3000);
+    }
   };
+  
 
   const validEmail = (email) => {
     const re = /\S+@\S+\.\S+/;
