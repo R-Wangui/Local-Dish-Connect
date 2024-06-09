@@ -93,7 +93,7 @@ function VendorLogin() {
                 border: 'none',
                 margin: '20px 0',
                 color: "#000"
-              }}><Link to='/customerlogin' style={{textDecoration: 'none', color: 'black'}}  >LOG IN <img src="/images/arrow-right.svg" alt="" /></Link> </Buttons>
+              }}><Link to='/vendorsdashboard' style={{textDecoration: 'none', color: 'black'}}  >LOG IN <img src="/images/arrow-right.svg" alt="" /></Link> </Buttons>
             </div>
           
             <div style={{fontSize: "16px", fontWeight: 700, textAlign: "center", marginBottom: "30px" }}>

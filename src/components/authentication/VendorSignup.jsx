@@ -30,29 +30,27 @@ function VendorSignup() {
     } else if (!validEmail(email)) {
       setError("Please enter a valid email address");
       return;
-    } 
-    // else {
-    //   // Send the name, email and password saved in memory to the console
-    //   console.log('name:', name);
-    //   console.log('email:', email);
-    //   console.log('Password:', password);
-    //   // then clear the error message and set it to blank
-    //   setError('');
-    // }
-
-    //
-    setLoading(true);
-
-    setTimeout (() => {
+    } else {
+      // Send the name, email and password saved in memory to the console
       console.log('name:', name);
       console.log('email:', email);
       console.log('Password:', password);
+      // then clear the error message and set it to blank
       setError('');
-      setLoading(false)
-    }, 5000);
+    }
+
+    //
+    // setLoading(true);
+
+    // setTimeout (() => {
+    //   console.log('name:', name);
+    //   console.log('email:', email);
+    //   console.log('Password:', password);
+    //   setError('');
+    //   setLoading(false)
+    // }, 5000);
   };
   
-
   // validate the email so the user has to input a correct email and in the right formart
   const validEmail = (email) => {
     const re = /\S+@\S+\.\S+/;

@@ -6,7 +6,6 @@ import Vector from "../vector/Vector";
 import axios from "axios";
 import LoadingPage from "../../pages/LoadingPage";
 
-
 function CustomerSignup() {
   const [firstname, setFirstName] = useState("");
   const [lastname, setLastName] = useState("");
@@ -19,56 +18,55 @@ function CustomerSignup() {
   
   const apiUrl = "https://dishcorner.onrender.com/api/v1/auth/register";
 
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    try {
+      const response = await axios.get(apiUrl);
+      setSubmittedData(response.data);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError("");
-  
-    // Set loading state to true at the beginning of the function
-    setLoading(true);
-  
+
     if (!email || !password || !firstname || !lastname) {
-      setError("Please enter all the required fields");
-      setLoading(false); // Reset loading state
+      setError("Please enter username, email, and password");
       return;
     } else if (!validEmail(email)) {
       setError("Please enter a valid email address");
-      setLoading(false); // Reset loading state
       return;
+    } else {
+      try {
+        const response = await axios.post(apiUrl, {
+          firstname: firstname,
+          lastname: lastname,
+          email: email,
+          password: password,
+        });
+        console.log(response.data);
+        setSubmittedData(response.data); // Update state with submitted data
+        window.location.replace("/landing")
+      } catch (error) {
+        console.error("An error occurred:", error.response);
+        alert(error.response.data.message)
+        setError("An error occurred. Please try again.");
+      }
     }
-  
-    try {
-      // Log values to debug
-      console.log("Submitting data:", {
-        firstname,
-        lastname,
-        email,
-        password,
-      });
-  
-      const response = await axios.post(apiUrl, {
-        firstname,
-        lastname,
-        email,
-        password,
-      });
-      setSubmittedData(response.data);
-  
-      // Delay navigation and state reset by 3 seconds
-      setTimeout(() => {
-        setLoading(false); // Reset loading state
-      }, 5000);
-  
-    } catch (error) {
-      console.error("An error occurred:", error.response || error.message);
-      setError("An error occurred. Please try again.");
-  
-      // Ensure loading state is reset after 3 seconds even in case of error
-      setTimeout(() => {
-        setLoading(false);
-      }, 3000);
-    }
+    setLoading(true);
+    setTimeout (() => {
+      console.log('firstname:', firstname);
+      console.log('lastname:', lastname);
+      console.log('email:', email);
+      console.log('Password:', password);
+      setError(''); // Set the error message to empty after the data is submitted
+      setLoading(false); // Set the loading state to false after the data is submitted
+    }, 3000); // Set timeout at 3 seconds
   };
-  
 
   const validEmail = (email) => {
     const re = /\S+@\S+\.\S+/;
@@ -80,6 +78,7 @@ function CustomerSignup() {
 
   const styleTheButton = {
     backgroundColor: "#FDC55E",
+    color: "black",
     border: "none",
     marginTop: "60px",
     width: "500px",
@@ -157,9 +156,7 @@ function CustomerSignup() {
             />
             <div className="d-grid gap-2">
               <Buttons type="submit" size="lg" style={styleTheButton}>
-                <Link to="/landing" style={{ textDecoration: "none", color: "black" }}>
-                  SIGN UP <img src="/images/arrow-right.svg" alt="" />
-                </Link>
+                SIGN UP <img src="/images/arrow-right.svg" alt="" />
               </Buttons>
             </div>
           </Form.Group>
