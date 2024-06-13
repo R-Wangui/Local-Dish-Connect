@@ -1,8 +1,7 @@
 import { Form, Button, Alert } from 'react-bootstrap';
 import { useState, useEffect } from 'react';
-import { FaCheckSquare, FaHome, FaSquare, FaSquareFull } from 'react-icons/fa'
 import Buttons from '../layout/Buttons';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import LoadingPage from '../../pages/LoadingPage';
 
 
@@ -12,9 +11,9 @@ function VendorSignup() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [retypePassword, setRetypePassword] = useState('')
   const [error, setError] = useState('');
   const [loading, setLoading] = useState (false)
+  const navigate = useNavigate()
 
   // Event handler function for the form so it submits before refreshing the page
   const handleSubmit = (e) => {
@@ -24,9 +23,9 @@ function VendorSignup() {
       // This condition checks that you enter a valid email and password
       setError("Please enter username, email and password");
       return;
-    } else if (name !== available) {
-      setError("Username not available");
-      return;
+    // } else if (name !== available) {
+    //   setError("Username not available");
+    //   return;
     } else if (!validEmail(email)) {
       setError("Please enter a valid email address");
       return;
@@ -37,9 +36,10 @@ function VendorSignup() {
       console.log('Password:', password);
       // then clear the error message and set it to blank
       setError('');
+      navigate("/vendorsdashboard");
     }
 
-    //
+    
     // setLoading(true);
 
     // setTimeout (() => {
@@ -48,7 +48,7 @@ function VendorSignup() {
     //   console.log('Password:', password);
     //   setError('');
     //   setLoading(false)
-    // }, 5000);
+    // }, 3000);
   };
   
   // validate the email so the user has to input a correct email and in the right formart
@@ -129,7 +129,7 @@ function VendorSignup() {
                 border: 'none',
                 margin: '20px 0',
                 color: "#000"
-              }}><Link to='/vendorsdashboard' style={{textDecoration: 'none', color: 'black'}} >Sign up <img src="/images/arrow-right.svg" alt="" /></Link></Buttons>
+              }}>SIGN UP <img src="/images/arrow-right.svg" alt="" /></Buttons>
               <h5 style={{textAlign: 'center', fontSize: "20px", fontWeight: 500, lineHeight: "30px"}}>CONTINUE A GUEST</h5>
             </div>
           </Form>

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Form, Alert } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Buttons from "../layout/Buttons";
 import Vector from "../vector/Vector";
 import axios from "axios";
@@ -14,6 +14,7 @@ function CustomerSignup() {
   const [error, setError] = useState("");
   const [submittedData, setSubmittedData] = useState(null); // State to store submitted data
   const [loading, setLoading] = useState(false)
+  const navigate = useNavigate()
 
   
   const apiUrl = "https://dishcorner.onrender.com/api/v1/auth/register";
@@ -50,11 +51,12 @@ function CustomerSignup() {
         });
         console.log(response.data);
         setSubmittedData(response.data); // Update state with submitted data
-        window.location.replace("/landing")
+        // window.location.replace("/landing")
+        navigate("/landing");
       } catch (error) {
         console.error("An error occurred:", error.response);
-        alert(error.response.data.message)
-        setError("An error occurred. Please try again.");
+        // alert(error.response.data.message)
+        setError("An error occurred. Please try again."); // This is not working
       }
     }
     setLoading(true);

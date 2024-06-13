@@ -15,6 +15,10 @@ import Footer from "../components/layout/Footer";
 // It shows the services provided by this webapp. They can navigate to other pages through the navbar
 
 function Landing() {
+
+  // const [welcomeAlert, setWelcomeAlert] = useState("");
+  // setWelcomeAlert(`Welcome, ${response.data.firstname}! Your signup was successful.`);
+
   return (
     <>
         <NavigationBar />
