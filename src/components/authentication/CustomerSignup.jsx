@@ -1,82 +1,55 @@
-import { useState, useEffect } from "react";
-import { Form, Alert } from "react-bootstrap";
+import { useState } from "react";
+import { Form, Alert, Spinner } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import Buttons from "../layout/Buttons";
 import Vector from "../vector/Vector";
 import axios from "axios";
-import LoadingPage from "../../pages/LoadingPage";
+import * as yup from "yup";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+
+// import LoadingPage from "../../pages/LoadingPage";
 
 function CustomerSignup() {
-  const [firstname, setFirstName] = useState("");
-  const [lastname, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  // use useState hook to manage the state of the page as you're filling in the form and submitting it
   const [error, setError] = useState("");
-  const [submittedData, setSubmittedData] = useState(null); // State to store submitted data
+  // const [submittedData, setSubmittedData] = useState(null); // State to store submitted data
   const [loading, setLoading] = useState(false)
   const navigate = useNavigate()
 
-  
-  const apiUrl = "https://dishcorner.onrender.com/api/v1/auth/register";
+  // Store your API URL in a constant variable
+  const apiUrl = import.meta.env.VITE_API_ENDPOINT;
 
-  useEffect(() => {
-    fetchData();
-  }, []);
+  const schema = yup.object().shape({
+    firstname: yup.string().required("First name is required"),
+    lastname: yup.string().required("Last name is required"),
+    email: yup.string().email("Invalid email").required("Email is required"),
+    password: yup
+      .string()
+      .min(6, "Password must be at least 6 characters")
+      .required("Password is required"),
+  });
 
-  const fetchData = async () => {
+  const { register, handleSubmit, formState: {errors}
+  } = useForm({
+    resolver: yupResolver(schema)
+  })
+  const onSubmit = async (formData) => {
+    setLoading(true);
     try {
-      const response = await axios.get(apiUrl);
-      setSubmittedData(response.data);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    if (!email || !password || !firstname || !lastname) {
-      setError("Please enter username, email, and password");
-      return;
-    } else if (!validEmail(email)) {
-      setError("Please enter a valid email address");
-      return;
-    } else {
-      try {
-        const response = await axios.post(apiUrl, {
-          firstname: firstname,
-          lastname: lastname,
-          email: email,
-          password: password,
-        });
-        console.log(response.data);
-        setSubmittedData(response.data); // Update state with submitted data
-        // window.location.replace("/landing")
+        const response = await axios.post(apiUrl, formData);
+        console.log("Submitted:", response.data);
+        // setSubmittedData(response.data); // Update state with submitted data
         navigate("/landing");
       } catch (error) {
-        console.error("An error occurred:", error.response);
+        console.error("Signup error:", error.response);
         // alert(error.response.data.message)
-        setError("An error occurred. Please try again."); // This is not working
+        setError( error?.response?.data?.message || "An error occurred. Please try again."); // This is not working
+      } finally {
+        setLoading(false);
       }
-    }
-    setLoading(true);
-    setTimeout (() => {
-      console.log('firstname:', firstname);
-      console.log('lastname:', lastname);
-      console.log('email:', email);
-      console.log('Password:', password);
-      setError(''); // Set the error message to empty after the data is submitted
-      setLoading(false); // Set the loading state to false after the data is submitted
-    }, 3000); // Set timeout at 3 seconds
+    
   };
-
-  const validEmail = (email) => {
-    const re = /\S+@\S+\.\S+/;
-    return re.test(email);
-  };
-  if (loading) {
-    return <LoadingPage />; // Render the Loading page component if loading
-  }
 
   const styleTheButton = {
     backgroundColor: "#FDC55E",
@@ -90,7 +63,7 @@ function CustomerSignup() {
     <>
       <div id="signup">
         {error && <Alert variant="danger">{error}</Alert>}
-        <Form id="form" onSubmit={handleSubmit}>
+        <Form id="form" onSubmit={handleSubmit(onSubmit)}>
           <h1 className="header">Sign Up</h1>
           <div id="social-logins">
             <p>Signup using social networks</p>
@@ -123,18 +96,18 @@ function CustomerSignup() {
               required
               type="text"
               placeholder="John"
-              value={firstname}
-              onChange={(e) => setFirstName(e.target.value)}
+              isInvalid={!!errors.firstname}
+              {...register("firstname")}
             />
-            </Form.Group>
+          </Form.Group>
           <Form.Group className="mb-3" controlId="formGroupName">
             <Form.Label>Last Name</Form.Label>
             <Form.Control
               required
               type="text"
               placeholder="Doe"
-              value={lastname}
-              onChange={(e) => setLastName(e.target.value)}
+              isInvalid={!!errors.lastname}
+              {...register("lastname")}
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formGroupEmail">
@@ -143,8 +116,8 @@ function CustomerSignup() {
               required
               type="email"
               placeholder="Enter email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              isInvalid={!!errors.email}
+              {...register("email")}
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formGroupPassword">
@@ -153,12 +126,23 @@ function CustomerSignup() {
               required
               type="password"
               placeholder="Password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              isInvalid={!!errors.password}
+              {...register("password")}
             />
+            <Form.Control.Feedback type="invalid">
+              {errors.password?.message}
+            </Form.Control.Feedback>
             <div className="d-grid gap-2">
               <Buttons type="submit" size="lg" style={styleTheButton}>
-                SIGN UP <img src="/images/arrow-right.svg" alt="" />
+                {loading ? (
+                  <>
+                    <Spinner size="sm" animation="border" />
+                  </>
+                ) : (
+                  <>
+                    SIGN UP <img src="/images/arrow-right.svg" alt="" />
+                  </>
+                )}
               </Buttons>
             </div>
           </Form.Group>
@@ -175,16 +159,9 @@ function CustomerSignup() {
         <img src="\images\Signup image.png" alt="food-image" />
       </div>
       <div id="tagline2">
-        <h3>Eat your favourite meal at the nearest Restaurant close to you</h3>
+        <h4>Eat your favourite meal at the nearest Restaurant close to you</h4>
         <p>We connect our customers to food Vendors in their neighborhood</p>
       </div>
-
-      {/* Display submitted data */}
-      {submittedData && (
-        <div>
-          
-        </div>
-      )}
     </>
   );
 }
