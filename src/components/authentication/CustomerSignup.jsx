@@ -3,22 +3,19 @@ import { Form, Alert, Spinner } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import Buttons from "../layout/Buttons";
 import Vector from "../vector/Vector";
-import axios from "axios";
+// import axios from "axios";
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { auth, db } from "../../services/firebase"
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { doc, setDoc } from "firebase/firestore";
 
-// import LoadingPage from "../../pages/LoadingPage";
 
 function CustomerSignup() {
-  // use useState hook to manage the state of the page as you're filling in the form and submitting it
   const [error, setError] = useState("");
-  // const [submittedData, setSubmittedData] = useState(null); // State to store submitted data
-  const [loading, setLoading] = useState(false)
-  const navigate = useNavigate()
-
-  // Store your API URL in a constant variable
-  const apiUrl = import.meta.env.VITE_API_ENDPOINT;
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   const schema = yup.object().shape({
     firstname: yup.string().required("First name is required"),
@@ -36,15 +33,26 @@ function CustomerSignup() {
   })
   const onSubmit = async (formData) => {
     setLoading(true);
+    const { firstname, lastname, email, password } = formData
     try {
-        const response = await axios.post(apiUrl, formData);
-        console.log("Submitted:", response.data);
-        // setSubmittedData(response.data); // Update state with submitted data
+      console.log("Creating user...");
+
+      const customerData = await createUserWithEmailAndPassword(auth, email, password);
+      const customer = customerData.user;
+
+      console.log("User created...", customer.uid);
+      console.log("Saving user to firestore...");
+      await setDoc(doc(db, "users", customer.uid), {
+        firstname,
+        lastname,
+        email,
+        createdAt: new Date()
+      });
+        console.log("Customer signup successful redirecting...");
         navigate("/landing");
-      } catch (error) {
-        console.error("Signup error:", error.response);
-        // alert(error.response.data.message)
-        setError( error?.response?.data?.message || "An error occurred. Please try again."); // This is not working
+    } catch (error) {
+        console.error("Signup error:", error);
+        setError( error.message); 
       } finally {
         setLoading(false);
       }

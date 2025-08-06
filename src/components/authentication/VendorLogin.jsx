@@ -3,49 +3,74 @@ import { useState } from 'react';
 import { FaRegCheckSquare } from 'react-icons/fa'
 import Buttons from '../layout/Buttons';
 import { Link } from 'react-router-dom';
+import * as yup from "yup"
+import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import axios from 'axios';
 
 
 
 function VendorLogin() {
   // use useState hook to set the email, password and throw error incase of an error
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [loading, setLoading] = useState();
   const [error, setError] = useState('');
+
+  const api = import.meta.env.VITE_API_ENDPOINT;
+
+  const schema = yup.object().shape({
+    email: yup.string().email().required(),
+    password: yup
+      .string()
+      .min(6, "Password must be at least 6 characters")
+      .required(),
+  });
+
+  const { register, handleSubmit, formState: { errors }
+  } = useForm({
+    resolver: yupResolver(schema)
+  })
   
 
 // Event handler function for the form so it submits before refreshing the page
-  const handleSubmit = (e) => {
-    e.preventDefault();
-      // This condition checks if the email and password you used matches what is in memory
-    if (!email || !password) {
-      setError("Please enter email and password");
-      return;
-    } else if (!validEmail(email)) {
-      setError("Please enter a valid email address");
-      return;
-    } else if (password !== 'password') {
-      setError("Incorrect password.Please enter the correct password");
-      return;
-    } else {
-      // Send the email and password saved in memory to the console
-      console.log('email:', email);
-      console.log('Password:', password);
-      // then clear the error message and set it to blank
-      setError('');
+  const onSubmit = async (formData) => {
+    setLoading(true);
+    try {
+      const response = await axios.post(api, formData);
+      console.log("Submitted:", response.data)
+      
+    } catch (error) {
+      console.log("error", error)
+      setError(error?.response?.data?.message || "An error occured. try again");
+    } finally {
+      setLoading(false);
     }
+
+    // e.preventDefault();
+    //   // This condition checks if the email and password you used matches what is in memory
+    // if (!email || !password) {
+    //   setError("Please enter email and password");
+    //   return;
+    // } else if (!validEmail(email)) {
+    //   setError("Please enter a valid email address");
+    //   return;
+    // } else if (password !== 'password') {
+    //   setError("Incorrect password.Please enter the correct password");
+    //   return;
+    // } else {
+    //   // Send the email and password saved in memory to the console
+    //   console.log('email:', email);
+    //   console.log('Password:', password);
+    //   // then clear the error message and set it to blank
+    //   setError('');
+    // }
   }
-  // validate the email so the user has to input a correct email and in the right formart
-  const validEmail = (email) => {
-    const re = /\S+@\S+\.\S+/;
-    return re.test(email);
-  };
 
   return (
     <> 
       <div id='vendorLogin'>
         <div id="login">
           {error && <Alert variant="danger">{error}</Alert>}
-          <Form id="form" onSubmit={handleSubmit}>
+          <Form id="form" onSubmit={handleSubmit(onSubmit)}>
             <h1>Log in</h1>
             <div id="social-logins">
               <p>Log in using social networks</p>
@@ -64,8 +89,8 @@ function VendorLogin() {
                   required
                   type="email"
                   placeholder="Enter email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  isInvalid={!!errors.email}
+                  {...register ("email")}
                   style={{ background: "rgba(240, 245, 250, 1)", height: "62px", width: "100%" }}
                 />
             </Form.Group>
@@ -75,8 +100,8 @@ function VendorLogin() {
                   required
                   type="password"
                   placeholder="Password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
+                  isInvalid={!!errors.password}
+                  {... register ("password")}
                   style={{ background: "rgba(240, 245, 250, 1)", height: "62px", width: "100%" }}
                 />
             </Form.Group>
