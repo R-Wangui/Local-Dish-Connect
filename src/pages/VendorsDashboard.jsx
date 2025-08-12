@@ -10,28 +10,39 @@ import TopReviews from '../components/vendors dashboard/TopReviews'
 import VendorName from '../components/vendors dashboard/VendorName'
 import CustomersReports from '../components/vendors dashboard/CustomersReports'
 import TotalVisits from '../components/vendors dashboard/TotalVisits'
+// import { useContext } from 'react'
+// import { AnalyticsContext } from '../context/AnalyticsContextProvider'
 
 // This is the landingpage for Vendors. As soon as they login/signup, the will be routed to this page
 // This dashboard contains business tools that help them keep track of all their operations.
 // They can also navigate to various pages through the aside. 
 
 function VendorDashboard() {
+  
+  // const [visitData, setVisitData] = useState([]);
+
+  // useEffect(() =>{
+  //   getVisitCountPerDay().then(setVisitData)
+  // }, []);
+
   return (
     <>
-        <VendorsBashboardNavbar />
-        <Aside />
-        <Clicks />
-        <CustomerRatings />
-        <FilterPeriod />
-        <Income />
-        <CustomersReports />
-        <PopularFoods />
-        <TopCustomer />
-        <TopReviews />
-        <TotalVisits />
-        <VendorName />
+      {/* <DashboardLayout> */}
+      <VendorsBashboardNavbar />
+      <Aside />
+      <Clicks />
+      <CustomerRatings />
+      <FilterPeriod />
+      <Income />
+      <CustomersReports />
+      <PopularFoods />
+      <TopCustomer />
+      <TopReviews />
+      <TotalVisits />
+      <VendorName />
+      {/* </DashboardLayout> */}
     </>
-  )
+  );
 }
 
 export default VendorDashboard

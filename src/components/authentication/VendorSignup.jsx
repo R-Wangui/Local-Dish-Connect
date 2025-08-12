@@ -7,11 +7,16 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+// import { logVisit } from "../../services/analytics";
 
 function VendorSignup() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+
+  // useEffect( () => {
+  //   if(user) logVisit(userId);
+  // }, [user])
 
   const schema = yup.object().shape({
     username: yup.string().required(),

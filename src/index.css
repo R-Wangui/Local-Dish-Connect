@@ -61,9 +61,9 @@ body {
 }
 
 /* Responsiveness for the Container that comes with the Navbar */
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 480px) {
   .container-fluid {
-    max-width: 100%;
+    width: auto;
   }
 }
 /* styling for the authentication pages */
@@ -217,7 +217,7 @@ h1 {
   }
   #form {
     margin-top: 60px;
-    width: 100%;
+    /* width: 100%; */
     font-family: "Montserrat", sans-serif;
     background-color: white;
     z-index: 1;
@@ -679,10 +679,10 @@ Card.Img {
 }
 
 /* Media Query for the landing page */
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 480px) {
   body {
     overflow-x: hidden;
-    width: auto;
+    /* width: auto; */
   }
   .me-2 {
     display: none;
@@ -711,12 +711,12 @@ Card.Img {
     display: inline-flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    width: 350px;
+    width: 380px;
     border-radius: 22px 0px 0px 0px;
     position: relative;
   }
   .search-location {
-    top: -60px;
+    /* top: -60px; */
     left: 44px;
     height: 136px;
     width: 304px;  
@@ -732,7 +732,7 @@ Card.Img {
     font-family: "Montserrat", sans-serif;
     text-align: center;
     font-weight: 700;
-    font-size: 48px;
+    font-size: 40px;
     margin-bottom: 60px;
   }
   .allCuisines {
@@ -769,7 +769,7 @@ Card.Img {
   }
   .vendors-title {
     color: #191919;
-    font-size: 48px;
+    font-size: 40px;
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
     text-transform: capitalize;
@@ -1042,7 +1042,7 @@ Card.Img {
     height: 290px;
     overflow: hidden;
   }
-  #revenueContainer h4 {
+  #revenueContainer h5 {
     position: absolute;
     top: 10px;
     padding-bottom: 4px;

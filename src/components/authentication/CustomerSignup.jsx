@@ -9,7 +9,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { auth, db } from "../../services/firebase"
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { doc, setDoc } from "firebase/firestore";
+// import { doc, setDoc } from "firebase/firestore";
 
 
 function CustomerSignup() {
@@ -42,12 +42,12 @@ function CustomerSignup() {
 
       console.log("User created...", customer.uid);
       console.log("Saving user to firestore...");
-      await setDoc(doc(db, "users", customer.uid), {
-        firstname,
-        lastname,
-        email,
-        createdAt: new Date()
-      });
+      // await setDoc(doc(db, "users", customer.uid), {
+      //   firstname,
+      //   lastname,
+      //   email,
+      //   createdAt: new Date()
+      // });
         console.log("Customer signup successful redirecting...");
         navigate("/landing");
     } catch (error) {

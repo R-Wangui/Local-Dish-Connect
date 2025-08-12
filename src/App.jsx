@@ -1,4 +1,3 @@
-import React from 'react'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Landing from './pages/Landing'
 import VendorsPage from './pages/VendorsPage'
@@ -9,10 +8,10 @@ import VendorLogin from './components/authentication/VendorLogin';
 import VendorSignup from './components/authentication/VendorSignup';
 import VendorsDashboard from './pages/VendorsDashboard';
 import BusinessProfile from './pages/BusinessProfile';
-import CustomerChangePassword from './components/authentication/CustomerChangePassword';
-import CustomerForgotPassword from './components/authentication/CustomerForgotPassword';
-import VendorForgotPassword from './components/authentication/VendorForgotPassword';
-import VendorChangePassword from './components/authentication/VendorChangePassword';
+// import CustomerChangePassword from './components/authentication/CustomerChangePassword';
+// import CustomerForgotPassword from './components/authentication/CustomerForgotPassword';
+// import VendorForgotPassword from './components/authentication/VendorForgotPassword';
+// import VendorChangePassword from './components/authentication/VendorChangePassword';
 import MenuManagement from './pages/MenuManagement';
 import LoadingPage from './pages/LoadingPage';
 

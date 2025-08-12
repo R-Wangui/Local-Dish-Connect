@@ -1,7 +1,12 @@
-import React from 'react'
+import { logFoodClick } from '../../services/analytics'
 import Buttons from '../layout/Buttons'
+import PropTypes from "prop-types";
 
-function Cuisines() {
+function Cuisines({foodId, userId}) {
+
+  const handleClick = () => {
+    logFoodClick(foodId, userId)
+  }
 
   const buttonStyling = {
     backgroundColor: '#006B61',
@@ -14,23 +19,23 @@ function Cuisines() {
         <div id="cuisines">
           <h1 className='cuisine-header'><span>Choose from our <br/>Categories of </span><span style={{color:'#FDC55E'}}>Cuisines</span></h1>
           <div className='allCuisines'>
-            <div className='cuisine'>
+            <div className='cuisine' onClick={handleClick}>
               <img src="\images\Cuisine img1.png" alt="cuisine-image" />
               <h4>Efo Riro</h4>
             </div>
-            <div className='cuisine'>
+            <div className='cuisine' onClick={handleClick}>
               <img src="\images\Ellipse 60.png" alt="cuisine-image" />
               <h4>Tuwo shinkafa</h4>
             </div>
-            <div className='cuisine'>
+            <div className='cuisine' onClick={handleClick}>
               <img src="\images\Cuisine img1.png" alt="cuisine-image" />
               <h4>Ofe-nsala</h4>
             </div>
-            <div className='cuisine'>
+            <div className='cuisine' onClick={handleClick}>
               <img src="\images\Cuisine img1.png" alt="cuisine-image" />
               <h4>Ofe-nsala</h4>
             </div>
-            <div className='cuisine'>
+            <div className='cuisine' onClick={handleClick}>
               <img src="\images\Cuisine img1.png" alt="cuisine-image" />
               <h4>Ofe-nsala</h4>
             </div>
@@ -43,5 +48,8 @@ function Cuisines() {
     </>
   )
 }
+Cuisines.propTypes = {
+  children: PropTypes.node.isRequired,
+};
 
 export default Cuisines

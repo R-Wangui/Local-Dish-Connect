@@ -36,9 +36,7 @@ function CustomerLogin() {
       navigate("/landing");
     } catch (error) {
       console.error("Error:", error);
-      setError(
-        error?.response?.data?.message || "An error occurred. Please try again."
-      );
+      setError(error.message);
     } finally {
       setLoading(false);
     }
