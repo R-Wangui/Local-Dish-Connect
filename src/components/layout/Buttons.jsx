@@ -18,8 +18,9 @@ function Buttons({variant, children, type, value, size, style, onClick}) {
   );
 }
 
-Buttons.propTypes = {
-    children: PropTypes.node.isRequired,
-}
+// Buttons.propTypes = {
+//   variant: PropTypes.string.isRequired,
+//   children: PropTypes.node.isRequired,
+// }
 
 export default Buttons;

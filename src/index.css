@@ -1010,12 +1010,21 @@ Card.Img {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 32px;
+    /* gap: 12px; */
     background-color: #006B61;
     padding: 20px;
     color: white;
     height: 100%;
   }
+.aside-link-container {
+    display: flex; 
+    align-items: center;
+    margin: 5px 0;
+    cursor: pointer;
+    text-decoration: none;
+    color: white; 
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
   .asideIcon {
     background-color: #38383A;
     padding: 12px;
@@ -1033,18 +1042,36 @@ Card.Img {
     width: 200px;
     margin-left: -4px;
   }
+
+/* Hover effect for all links */
+.aside-link-container:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle hover effect */
+    border-radius: 16px;
+}
+  /* THE ACTIVE STYLING */
+.aside-link-active {
+  background-color: #FDC55E; 
+  padding: 0px 4px;
+  border-radius: 16px;
+  color: black;
+}
+/* Ensure the icon and text within the active link inherit the color */
+.aside-link-active .aside-icon {
+  color: black; 
+}
+
   /* Styling for the Total Revenue NOW KNOWN AS THE TOTAL NO. OF VISIT ON THE WEBAPP */
-  #revenueContainer {
-    position: absolute;
-    top: 182px;
-    left: 264px;
-    border: 1px solid #006B61;
-    border-radius: 8px;
-    padding: 24px;
-    width: 400px;
-    height: 290px;
-    overflow: hidden;
-  }
+#revenueContainer {
+  position: absolute;
+  top: 182px;
+  left: 264px;
+  border: 1px solid #006B61;
+  border-radius: 8px;
+  padding: 24px;
+  width: 400px;
+  height: 290px;
+  overflow: hidden;
+}
   #revenueContainer h5 {
     position: absolute;
     top: 10px;
