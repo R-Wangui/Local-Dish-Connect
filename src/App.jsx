@@ -14,6 +14,7 @@ import BusinessProfile from './pages/BusinessProfile';
 // import VendorChangePassword from './components/authentication/VendorChangePassword';
 import MenuManagement from './pages/MenuManagement';
 import LoadingPage from './pages/LoadingPage';
+import MenuPage from "./pages/MenuPage";
 
 
 function App() {
@@ -21,23 +22,25 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path='/' element={<WelcomePage />} />
-          <Route path='/vendorlogin' element={<VendorLogin />}></Route>
-          <Route path='/customerlogin' element={<CustomerLogin />}></Route>
-          <Route path='/vendorsignup' element={<VendorSignup />}></Route>
-          <Route path='/customersignup' element={<CustomerSignup />}></Route>
-          <Route path='/vendorsdashboard' element={<VendorsDashboard />}></Route>
-          <Route path='/landing' element={<Landing />}></Route>
-          <Route path='/vendorspage' element={<VendorsPage />}></Route>
-          <Route path='/businessprofile' element={<BusinessProfile />}></Route>
-          <Route path='/menumanagement' element={<MenuManagement />}></Route>
-          <Route path='/loadingpage' element={<LoadingPage />}></Route>
-
+          <Route path="/" element={<WelcomePage />} />
+          <Route path="/vendorlogin" element={<VendorLogin />}></Route>
+          <Route path="/customerlogin" element={<CustomerLogin />}></Route>
+          <Route path="/vendorsignup" element={<VendorSignup />}></Route>
+          <Route path="/customersignup" element={<CustomerSignup />}></Route>
+          <Route
+            path="/vendorsdashboard"
+            element={<VendorsDashboard />}
+          ></Route>
+          <Route path="/landing" element={<Landing />}></Route>
+          <Route path="/menu" element={<MenuPage />}></Route>
+          <Route path="/vendorspage" element={<VendorsPage />}></Route>
+          <Route path="/businessprofile" element={<BusinessProfile />}></Route>
+          <Route path="/menumanagement" element={<MenuManagement />}></Route>
+          <Route path="/loadingpage" element={<LoadingPage />}></Route>
         </Routes>
-      </Router> 
-      
+      </Router>
     </>
-  )
+  );
 }
 
 export default App
