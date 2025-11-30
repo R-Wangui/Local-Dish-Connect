@@ -1,6 +1,9 @@
 import { FaAngleDown } from 'react-icons/fa';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from "recharts";
 import PropTypes from "prop-types";
+import { useEffect, useState } from 'react';
+import { collection, doc, onSnapshot } from 'firebase/firestore';
+import { db } from '../../services/firebase';
 
 // const data = [
 //   {
@@ -41,7 +44,19 @@ import PropTypes from "prop-types";
 //   }
 // ];
 
- function TotalVisits({data}) {
+function TotalVisits() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const visitsRef = collection(db, "visits");
+    const unsubscribe = onSnapshot(visitsRef, (snapshot) => {
+      const visitData = snapshot.docs.map((doc) => doc.data());
+      const monthOrder = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+      const sorted = visitData.sort((a, b) => monthOrder.indexOf(a.month) - monthOrder.indexOf(b.month));
+      setData(sorted);
+    });
+    return () => unsubscribe();
+  }, []);
    // Initially known as Total Revenue
    return (
      <>

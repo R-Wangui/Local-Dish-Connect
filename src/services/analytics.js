@@ -1,10 +1,14 @@
 import { addDoc, collection, getDocs, Timestamp } from "firebase/firestore"
 import { db } from "./firebase";
 
+// const month = format(new Date(), "MMM");
+// const visitRef = doc(db, "visits", month);
+
 // Analytics for each visit
 export const logVisit = async (userId) => {
+  
   try { 
-      await addDoc(collection(db, "analytics/visits"), {
+      await addDoc(collection(db, "visits"), {
         userId,
         timestamp: Timestamp.now(),
       });
@@ -14,7 +18,7 @@ export const logVisit = async (userId) => {
 };
 
 export const visitCount = async () => {
-    const snapshot = await getDocs(collection(db, "analytics/visits"));
+    const snapshot = await getDocs(collection(db, "visits"));
     return snapshot.size
 };
 

@@ -20,7 +20,7 @@ function WelcomePage() {
                 <div className='welcomebtns'>
                     <div className='welcomeheader'>
                         <h1><span>Welcome To </span><br/><span style={{color: '#FDC55E'}}> Local Dish Corner! </span></h1>
-                        <h5>Get start with us as a </h5>
+                        <h5>Get started with us as a </h5>
                     </div>
                     <Buttons type="submit" size='lg' variant="outline-warning" style={welcomeBtnStyle}><Link to='/vendorsignup' style={{textDecoration: 'none', color: 'black'}}  >Vendor <img src="/images/arrow-right.svg" alt="" /></Link></Buttons>
                     <Buttons type="submit" size='lg' variant="outline-warning" style={welcomeBtnStyle}><Link to='/customersignup' style={{textDecoration: 'none', color: 'black'}}  >Customer <img src="/images/arrow-right.svg" alt="" /></Link></Buttons>

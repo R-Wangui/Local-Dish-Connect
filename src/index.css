@@ -1004,6 +1004,12 @@ Card.Img {
       font-size: 12px;
     }
   }
+  /* Menu page */
+  #menus {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+  }
   /* Styling for VENDOR'S DASHBOARD STARTS HERE*/
   #vendorAside {
     display: inline-flex;
