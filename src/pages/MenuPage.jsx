@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Footer from "../components/layout/Footer";
 import NavigationBar from "../components/layout/NavigationBar";
+import { RecommendedRestaurantCard } from "../components/layout/RecommendedRestaurantsCard"
 import { collection, onSnapshot } from "firebase/firestore";
 import { db } from "../services/firebase";
 
@@ -34,15 +35,17 @@ function MenuPage() {
         {menuItems.length > 0 ? (
           <div
             id="menus"
-            //   className="h-auto m-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 lg:gap-12"
           >
             {menuItems.map((item) => (
-              <div className="p-4 border rounded shadow" key={item.id}>
-                <img src="" alt="" />
-                <h5>{item.name}</h5>
-                <p>{item.category}</p>
-                <p>{item.price}</p>
-              </div>
+              <RecommendedRestaurantCard
+                key={item.id}
+                image={item.image}
+                name={item.name}
+                description={item.description}
+                price={item.price}
+                rating={item.rating}
+              />
             ))}
           </div>
         ) : (

@@ -1,5 +1,7 @@
 /* Import the font */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
 
 /* * {
   overflow: hidden;
@@ -486,14 +488,6 @@ Card.Img {
   .restaurant1 {
     margin-bottom: 40px;
   }
-  /* #container {
-    display: flex;
-    flex-direction: column;
-    margin-left: 80px;
-    align-self: center;
-    height: fit-content;
-    flex-shrink: 0;
-  } */
   .arc {
     left: 110px;
     position: relative;
@@ -817,7 +811,7 @@ Card.Img {
     z-index: -1;
   }
   /* Styling recommended restaurant categories */
-  #recommended-restaurants {
+  /* #recommended-restaurants {
     margin-top: 96px;
     align-items: center;
   }
@@ -831,7 +825,7 @@ Card.Img {
   .restaurant1 {
     margin-bottom: 40px;
     margin-left: -60px;
-  }
+  } */
   /* Responsive styling for download section */
   #download-app {
     display: flex;
@@ -1009,6 +1003,7 @@ Card.Img {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 6px;
+    margin-top: 20px;
   }
   /* Styling for VENDOR'S DASHBOARD STARTS HERE*/
   #vendorAside {
