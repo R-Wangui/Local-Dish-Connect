@@ -34,6 +34,7 @@ function MenuManagement() {
     rank: "",
     name: "",
     image: "",
+    description: "",
     price: "",
     available: "",
   });
@@ -68,6 +69,7 @@ function MenuManagement() {
       name: "",
       image: "",
       price: "",
+      description: "",
       category: "",
       available: true,
     });
@@ -167,6 +169,7 @@ function MenuManagement() {
               <th>Rank</th>
               <th>Name</th>
               <th>Price</th>
+              <th>Description</th>
               <th>Category</th>
               <th>Available</th>
               <th>Actions</th>
@@ -178,6 +181,7 @@ function MenuManagement() {
                 <td>{item.rank}</td>
                 <td>{item.name}</td>
                 <td>Ksh {item.price}</td>
+                <td>{item.description}</td>
                 <td>{item.category}</td>
                 <td>
                   {/* <input

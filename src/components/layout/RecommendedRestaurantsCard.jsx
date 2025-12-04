@@ -76,7 +76,7 @@ export function RecommendedRestaurantCard({
                 strokeWidth="4"
               />
             </svg>
-            <span className="absolute inset-0 flex items-center justify-center text-white font-bold text-sm">
+            <span className="absolute inset-0 flex items-center justify-center text-white font-bold text-xs">
               ${price}
             </span>
           </div>
