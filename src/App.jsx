@@ -15,7 +15,10 @@ import BusinessProfile from './pages/BusinessProfile';
 import MenuManagement from './pages/MenuManagement';
 import LoadingPage from './pages/LoadingPage';
 import MenuPage from "./pages/MenuPage";
-
+import CartPage from "./pages/CartPage";
+import CheckoutPage from "./pages/CheckoutPage";
+import PaymentPage from "./pages/PaymentPage";
+import OrderComplete from "./pages/OrderComplete"
 
 function App() {
   return (
@@ -32,6 +35,10 @@ function App() {
             element={<VendorsDashboard />}
           ></Route>
           <Route path="/landing" element={<Landing />}></Route>
+          <Route path="/cart" element={<CartPage />} />
+          <Route path="/checkout" element={<CheckoutPage />} />
+          <Route path="/payment" element={<PaymentPage />} />
+          <Route path="/order-complete" element={<OrderComplete />} />
           <Route path="/menu" element={<MenuPage />}></Route>
           <Route path="/vendorspage" element={<VendorsPage />}></Route>
           <Route path="/businessprofile" element={<BusinessProfile />}></Route>
